@@ -1,0 +1,8 @@
+*
+!*.tex
+!*.cls
+!*.md
+!.gitignore
+!images/*
+!filigran.jpg
+!logomuz.jpg
