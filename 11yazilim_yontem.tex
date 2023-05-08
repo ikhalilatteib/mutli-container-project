@@ -90,3 +90,37 @@ Docker'ın avantajları şunlardır:
 \end{itemize}
 
 Docker'ın bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.
+\subsection{MYSQL}
+Mysql, PHP programlama dili ile MySQL veritabanıyla etkileşim sağlamak için kullanılan bir PHP eklentisidir. mysql (MySQL Improved) eklentisi, MySQL veritabanı sunucusuna bağlantı kurmayı, sorguları yürütmeyi, veri alma ve veri güncelleme gibi işlemleri gerçekleştirmeyi sağlar.
+
+Mysql  eklentisi, önceki MySQL eklentisi olan mysql'nin geliştirilmiş ve geliştirilmiş bir sürümüdür. mysql, MySQL veritabanı sunucusunun daha yeni özelliklerini destekler ve daha iyi performans sağlar. Ayrıca, , daha güvenli ve daha kolay kullanım imkanı sunar.
+
+Mysql  kullanarak MySQL veritabanıyla çalışmak için aşağıdaki adımlar izlenir :
+\begin{enumerate}
+\item Bağlantı kurma: \textbf{mysql\_connect}  fonksiyonunu kullanarak MySQL veritabanı sunucusuna bir bağlantı kurabilirsiniz. Bu fonksiyon, sunucu adı, kullanıcı adı, parola ve veritabanı adı gibi bağlantı bilgilerini alır. Bağlantı başarılı bir şekilde kurulursa, bir bağlantı nesnesi döndürülür.
+
+\item Sorguları yürütme: \textbf{mysql\_query} fonksiyonunu kullanarak SQL sorgularını yürütebilirsiniz. Bu fonksiyon, bağlantı nesnesi ve yürütülecek sorguyu alır. Sorgu başarılı bir şekilde yürütülürse, sonuç seti veya etkilenen satır sayısı gibi sonuçları döndürür.
+
+\item Veri alma: \textbf{mysql\_fetch\_assoc, mysql\_fetch\_array veya mysql\_fetch\_row} gibi fonksiyonları kullanarak sonuç setinden veri alabilirsiniz. Bu fonksiyonlar, sonuç setindeki her bir satırı dizi veya ilişkisel dizi olarak döndürür.
+
+\item Veri güncelleme: \textbf{mysql\_query} fonksiyonunu kullanarak UPDATE, INSERT veya DELETE gibi güncelleme işlemlerini gerçekleştirebilirsiniz. Bu tür bir sorgu yürütüldüğünde, etkilenen satır sayısı döndürülür.
+
+\item Bağlantıyı kapatma: \textbf{mysql\_close} fonksiyonunu kullanarak MySQL bağlantısını kapatmanız önerilir. Bağlantı kapandıktan sonra, veritabanı sunucusu ile bağlantı sonlandırılır ve kaynaklar serbest bırakılır.
+\end{enumerate}
+Mysql, daha güncel bir PHP eklentisi olduğu için, daha fazla özellik ve işlevsellik sunar. Örneğin, hazır ifadelerle sorgu yapma, işlemi yürütme, parametre bağlama, işlem geçmişini takip etme gibi gelişmiş özelliklere sahiptir.
+Mysql, MySQL veritabanıyla güvenli ve etkili bir şekilde etkileşim sağlamak için aşağıdaki  özelliklere sahiptir:
+\begin{itemize}
+\item Hazır ifadelerle sorgu yapma: Mysql, hazır ifadeleri kullanarak sorguların daha güvenli bir şekilde yürütülmesini sağlar. Bu özellik, SQL enjeksiyon saldırılarına karşı koruma sağlar. Hazır ifadeler, parametrelerin değerlerini güvenli bir şekilde eklemek için kullanılır.
+
+\item İşlemi yürütme (Transaction): Mysql, işlemleri (transaction) destekler. İşlemler, birden çok sorgunun birleştirilerek atomik bir şekilde yürütülmesini sağlar. İşlem kullanarak veritabanı üzerinde bir dizi sorguyu gerçekleştirirken, tüm sorguların başarılı bir şekilde tamamlanması veya hiçbiri tamamlanmaması prensibiyle çalışır.
+
+\item Parametre bağlama (Parameter Binding): Mysql, parametreleri sorguya bağlamak için kullanılır. Bu, sorguları daha verimli hale getirir ve veritabanı sunucusunda ön işlemci tarafından daha iyi optimize edilmesini sağlar. Parametre bağlama, sorguların daha hızlı çalışmasını ve tekrar kullanılabilirliğini artırır.
+
+\item İşlem geçmişini takip etme: Mysql, gerçekleştirilen sorguların ve işlemlerin geçmişini takip etmek için özel işlevler sunar. Bu, hata ayıklama ve sorun giderme süreçlerinde yardımcı olur. Örneğin, mysql\_error fonksiyonu ile son gerçekleştirilen sorguyla ilgili hata mesajını alabiliriz.
+
+\item Önceden hazırlanmış bildirimler (Prepared Statements): Mysql, önceden hazırlanmış bildirimleri kullanarak sorguları daha verimli hale getirir. Bu, aynı sorgunun tekrar tekrar yürütülmesi durumunda performans avantajı sağlar. Önceden hazırlanmış bildirimler, sorguları oluştururken parametrelerin yerine geçecek yer tutucular kullanmayı sağlar.
+\end{itemize}
+Mysql, güvenlik, performans ve veri bütünlüğü açısından daha gelişmiş bir seçenek olduğu için MySQL veritabanıyla çalışırken tercih edilen bir PHP eklentisidir. Veritabanı işlemleri sırasında güvenlik açıklarını azaltır, daha verimli sorgular yapmanızı sağlar ve verilerin doğru bir şekilde yönetilmesini sağlar.
+
+
+
