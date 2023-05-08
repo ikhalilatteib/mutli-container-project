@@ -1,11 +1,92 @@
-\section{KULLANILAN YAZILIMLAR ve YÖNTEMLER}
+\section{KULLANILAN YAZILIMLAR VE YÖNTEMLER}
 
+\subsection{Laravel MVC}
 
+Laravel, popüler bir PHP framework'üdür ve MVC (Model-View-Controller) mimarisini kullanır. MVC, uygulamanın farklı katmanlarını birbirinden ayıran ve kodu düzenli, okunabilir ve bakımı kolay hale getiren bir tasarım desenidir. Laravel, bu deseni kullanarak uygulama geliştirmeyi kolaylaştırır.
 
+ Laravel MVC yapısının temel bileşenleri:
+\begin{itemize}
+\item Model:
+Model, uygulamanın veri katmanını temsil eder. Veritabanı ile etkileşimde bulunur, verileri alır, günceller ve saklar. Model, veritabanı tablolarını temsil eden sınıflardan oluşur. Laravel'de model sınıfları, genellikle veritabanı tablolarının adlarıyla eşleşir ve veri manipülasyonu için işlevler sağlarlar. Model, veriye erişim, sorgulama yapma, ilişkili veri işleme gibi görevleri üstlenir.
 
+\item View:
+View, kullanıcı arayüzünü temsil eder. Kullanıcıya sunulan bilgilerin nasıl görüntüleneceğini belirler. HTML, CSS ve bazen PHP kodları içeren şablon dosyalarından oluşur. View, kullanıcıdan gelen istekleri işler, gerekli verileri alır ve düzenli bir şekilde sunar. Laravel'de Blade isimli bir template motoru kullanılarak view'lar oluşturulur. Blade, basit ve esnek bir yapıya sahiptir ve kod tekrarını azaltmak için özelleştirilmiş dil yapısı sunar.
 
+\item Controller:
+Controller, model ve view arasındaki arabirimdir. Kullanıcıdan gelen istekleri alır, modeli kullanarak gerekli verileri işler, view'a iletilmek üzere verileri hazırlar. Controller, uygulamanın mantıksal işlevlerini yönetir. Laravel'de controller sınıfları, istemci tarafından yapılan isteklerin yönlendirilmesini ve işlenmesini sağlar. Controller, model ve view arasındaki iletişimi sağlayarak uygulamanın nasıl tepki verdiğini kontrol eder.
 
+\item Route:
+Route, gelen istekleri doğru controller'a yönlendiren URL yönlendirme sistemidir. Laravel'de route'lar, web.php veya api.php gibi dosyalarda tanımlanır. Route dosyasında URL'lerle ilgili işlemler, controller eşleştirmeleri ve istek metodları belirtilir. Bu sayede gelen talepler doğru controller'a yönlendirilir ve işlenir.
+\end{itemize}
+MVC yapısı, Laravel'de uygulama geliştirirken kodu düzenli ve modüler tutmayı sağlar. Her bileşen kendi sorumluluk alanına odaklanır ve birbirinden bağımsızdır. Bu sayede geliştirme süreci daha etkili ve yönetilebilir hale gelir.
+Aynı  zamanda, MVC yapısı sayesinde iş mantığı, veritabanı etkileşimi ve kullanıcı arayüzü birbirinden ayrı tutulur. Bu da kodun daha yeniden kullanılabilir, test edilebilir ve bakımı kolay olmasını sağlar.
 
+Laravel'de MVC yapısını kullanarak bir uygulama geliştirmek için aşağıdaki adımlar izlenebilir :
 
+\begin{enumerate}
+\item Model oluşturma:
+Veritabanı tablosuna karşılık gelecek bir model oluşturun. Bu model, veritabanı işlemleri için kullanacağınız sınıfı temsil eder. Laravel'de model sınıfları, app/Models dizini altında yer alır ve Eloquent ORM (Object-Relational Mapping) kullanılarak veritabanı işlemlerini gerçekleştirir.
 
+\item Controller oluşturma:
+İstekleri işleyecek ve yönlendirecek bir controller oluşturun. Controller, kullanıcıdan gelen istekleri alır, gerekli işlemleri yapar ve sonuçları view'a iletmek üzere hazırlar. Controller, app/Http/Controllers dizini altında yer alır ve Controller sınıfından türetilir.
 
+\item Route tanımlama:
+İstekleri doğru controller'a yönlendirmek için route'lar tanımlayın. Bu, URL'lerin belirli bir controller'a ve işlemine eşleştirilmesini sağlar. Laravel'de route'lar, routes/web.php veya routes/api.php gibi dosyalarda tanımlanır. Route tanımlarken HTTP metodu, URL ve ilgili controller metodu belirtilir.
+
+\item View oluşturma:
+Kullanıcı arayüzünü temsil eden view'lar oluşturun. Laravel'de Blade template motoru kullanılarak view'lar oluşturulur. View'lar, resources/views dizini altında yer alır ve HTML, CSS ve Blade dilini içeren şablon dosyalarından oluşur. View, kullanıcıya sunulan bilgilerin nasıl gösterileceğini belirler.
+
+\item Controller ve Model arasındaki iletişim:
+Controller, gerekli verileri model aracılığıyla alır veya günceller. Model, veritabanı işlemlerini gerçekleştirir ve gerekli verileri controller'a döndürür. Controller, aldığı verileri view'a ileterek kullanıcı arayüzünde gösterilmesini sağlar.
+\end{enumerate}
+
+MVC yapısı sayesinde, Laravel'de uygulama geliştirmek daha düzenli, okunabilir ve bakımı kolay bir şekilde gerçekleştirilebilir. Her bileşenin belirli bir sorumluluğu olduğu için, kodun yeniden kullanılabilirliği ve test edilebilirliği artar. Ayrıca, geliştirme sürecinde hız ve verimlilik sağlayarak uygulamanın daha iyi ölçeklenebilmesini ve yönetilebilmesini sağlar.
+
+\subsection{Docker }
+
+Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Docker, konteyner teknolojisi kullanarak uygulamaların izole edilmiş ve taşınabilir bir şekilde çalışmasını sağlar.
+
+Docker'ın çalışma yapısı şu şekildedir:
+\begin{itemize}
+\item Konteyner: Docker'ın temel yapı birimidir. Konteyner, uygulamanın tüm bağımlılıklarını (kod, çalışma zamanı, kütüphaneler, ortam değişkenleri vb.) bir araya getirir ve izole bir ortamda çalışmasını sağlar. Konteynerlar, bir uygulamayı çalıştırmak için gerekli olan tüm bileşenleri içerir ve bu sayede uygulamaları farklı ortamlarda tutarlı bir şekilde çalıştırabilirsiniz.
+
+\item Docker Image (Docker İmajı): Bir Docker konteynerini oluşturmak için kullanılan bir şablondur. Bir Docker imajı, bir veya daha fazla katman (layer) olarak adlandırılan yapı taşlarından oluşur. Her katman, imajın farklı bir bileşenini veya yapılandırmasını temsil eder. Bir Docker imajı, bir veya birden fazla konteyneri oluşturmak için kullanılabilir.
+
+\item Dockerfile (Docker Dosyası): Docker imajlarının nasıl oluşturulacağını tanımlayan bir metin dosyasıdır. Dockerfile, bir uygulamanın çalıştırılması için gerekli olan adımları ve komutları belirtir. Dockerfile, uygulama kodunu, çalışma zamanını, bağımlılıkları ve diğer yapılandırmaları imaja dahil etmek için kullanılır.
+
+\item Docker Registry: Docker imajlarının depolandığı ve paylaşıldığı bir merkezi kaynak. Docker Hub, en popüler ve yaygın kullanılan Docker Registry'dir. Docker Hub'da, birçok hazır Docker imajı bulabilir ve kendi imajlarınızı da paylaşabilirsiniz. Ayrıca, Docker Registry'lerini yerel olarak da kurabilir ve kullanabilirsiniz.
+\end{itemize}
+
+Docker'ın çalışma süreci  şu adımları içerir:
+\begin{enumerate}
+\item Bir Docker imajı oluşturma: Dockerfile kullanarak bir Docker imajı oluşturulur. Dockerfile'da, uygulamanın gereksinimleri, bağımlılıkları, çalışma zamanı ve diğer yapılandırmalar belirtilir.
+
+\item Docker imajının derlenmesi (build): Dockerfile'ı kullanarak, Docker imajı oluşturulur. Bu adımda Docker, Dockerfile'da tanımlanan adımları takip eder, gerekli paketleri indirir, bağımlılıkları kurar ve uygulamayı imaj haline getirir.
+
+\item Docker konteynerinin çalıştırılması: Oluşturulan Docker imajı temel alınarak Docker konteyneri çalıştırılır. Docker konteyneri, Docker imajının bir örneğidir ve çalışan bir uygulamayı temsil eder. Docker, konteynerin izole bir ortamda çalışmasını sağlar ve uygulamanın sistem üzerindeki kaynaklara erişmesini sınırlar.
+
+\item Konteynerler arası iletişim: Docker, birden fazla konteynerin birlikte çalışmasını sağlar. Konteynerler arasındaki iletişim, Docker ağı ve bağlantı noktaları aracılığıyla gerçekleştirilir. Bu sayede, farklı konteynerlar arasında veri ve kaynak paylaşımı yapılarak uygulamanın işlevselliği artırılabilir.
+
+\item Konteyner yönetimi: Docker, konteynerlerin yönetimini kolaylaştırır. Konteynerleri başlatma, durdurma, yeniden başlatma, silme gibi işlemleri yapabilirsiniz. Ayrıca, konteynerlerin kaynak kullanımını izleyebilir, logları görüntüleyebilir ve güncellemeleri gerçekleştirebilirsiniz.
+\end{enumerate}
+
+Docker'ın avantajları şunlardır:
+\begin{itemize}
+\item Taşınabilirlik: Docker, uygulamaların farklı platformlarda ve ortamlarda sorunsuz bir şekilde çalışmasını sağlar. Bir kez oluşturulan Docker imajı, farklı sistemlerde kolayca dağıtılabilir ve çalıştırılabilir.
+
+\item İzolasyon: Docker konteynerleri, uygulamaları ve bağımlılıklarını izole ederek, bir konteynerin diğerlerine etkileşimde bulunmasını engeller. Bu, güvenlik ve istikrar açısından önemli bir avantaj sağlar.
+
+\item Hızlı dağıtım ve ölçeklendirme: Docker, uygulamaların hızlı bir şekilde dağıtılmasını ve ölçeklendirilmesini sağlar. İmajların hızlı bir şekilde oluşturulması ve konteynerlerin hızlı bir şekilde başlatılması sayesinde uygulamaların hızlıca yayınlanması mümkün olur.
+
+\item Verimlilik: Docker, kaynakların etkin bir şekilde kullanılmasını sağlar. Konteynerler, daha az bellek ve işlemci gücü tüketerek daha fazla uygulamanın çalışmasını sağlar.
+
+\item Veri bütünlüğü: Docker, verilerin konteynerlerle birlikte taşınmasını ve yönetilmesini kolaylaştırır. Konteynerler, verileri izole bir şekilde tutar ve bu da veri bütünlüğünü sağlar.
+
+\item Hızlı geri alma ve güncelleme: Docker, imaj ve konteyner tabanlı bir yaklaşım kullanarak hızlı geri alma ve güncelleme süreçleri sağlar. Eski bir imaja geri dönerek veya güncellenmiş bir imajla yeni bir konteyner oluşturarak sistemde yapılan değişiklikleri geri almak veya güncellemek kolaydır.
+
+\item Kaynak verimliliği: Docker, paylaşılan çekirdek özelliklerini kullanarak kaynakların daha verimli bir şekilde kullanılmasını sağlar. Birçok konteyner, tek bir işletim sistemi çekirdeği üzerinde çalışır ve bu da sistem kaynaklarının daha etkin bir şekilde kullanılmasını sağlar.
+
+\item Topluluk desteği: Docker, geniş bir kullanıcı ve geliştirici topluluğuna sahiptir. Bu topluluk, Docker hakkında bilgi paylaşımı, sorun giderme ve yenilikçi çözümler sunma konusunda yardımcı olur. Docker Hub gibi kaynaklar, hazır kullanıma uygun imajlar ve araçlar sağlar.
+\end{itemize}
+
+Docker'ın bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.
