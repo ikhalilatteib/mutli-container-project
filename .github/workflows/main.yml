@@ -1,0 +1,36 @@
+name: Publier le fichier PDF sur une page GitHub
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: 0BMbitirme.tex
+      - name: 'Tar files'
+        run: tar -cvf 0BMbitirme.tar /home/runner/work/mutli-container-project/
+      - name: 'Upload 0BMbitirme'
+        uses: actions/upload-artifact@v2
+        with:
+         name: 0BMbitirme
+         path: 0BMbitirme.tar    
+      - uses: actions/download-artifact@v3
+        with:
+          name: 0BMbitirme
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add /home/runner/work/mutli-container-project/mutli-container-project/0BMbitirme.pdf -f
+          git commit -m "Güncel PDF eklendi"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
