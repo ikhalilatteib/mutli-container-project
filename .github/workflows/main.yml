@@ -32,3 +32,5 @@ jobs:
           git add /home/runner/work/mutli-container-project/mutli-container-project/0BMbitirme.pdf -f
           git commit -m "Güncel PDF eklendi"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
