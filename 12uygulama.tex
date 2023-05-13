@@ -6,7 +6,25 @@ Sağ kısımda menü bulunmaktadır. Buradan istediğiniz zaman görevler bölü
 Hesabım bölümü, profili ile ilgili düzenlemeler yapmayı sağlar. Bu bölümde profil bilgilerini güncelleyebilir, şifreniyi değiştirebilir, iletişim tercihlerini yönetebilir ve gizlilik ayarlarını düzenlenebilir. Bu şekilde, profili yönetebilir ve hesap istediğimiz  şekilde kişiselleştirebilir hale getirildi.
 %arayüz fotoğrafları eklenecek 
 \subsection{Arka paln işleyişi}
+Projenin alt yapısı, PHP framework'ü olan Laravel kullanılarak geliştirilmiştir. Projenin çalışması için bir docker-compose.yml dosyası kullanılarak Docker'da bir servis oluşturulmuştur. Bu servis, iki konteyner oluşturarak projenin çalışmasını sağlamaktadır. Docker yönetimi için Docker Engine API kullanılmıştır.
 
+\subsubsection{Docker Engine API}
+
+Docker, Docker Engine API olarak adlandırılan arka plan programı sayesinde etkileşim için bir API sağlamaktadır. Docker Engine API, birçok modern programlama dilinde yer alan HTTP kütüphanesi tarafından erişilen bir RESTful API'dir. Projedeki PHP SDK güncel olmadığı için, Docker API'yi kullanarak Laravel uygulaması ile haberleşme sağlayan DockerService adında bir servis yazılmıştır. Bu sayede konteyner oluşturma, çalıştırma, detaylarını görüntüleme gibi işlemler yapılabilmektedir.
+
+\subsubsection{Laravel Özellikleri}
+
+Bu projede, Laravel'in sağladığı özellikler kullanılarak geliştirme yapılmıştır. Bir IP'ye ping atma görevi oluşturma süreci şu şekildedir:
+
+Kullanıcı, ping oluşturma görevi formunu doldurmalıdır. Formda, görev başlığı, görev açıklaması, atılacak IP adresi, oluşturulacak konteyner sayısı ve her bir konteynerda kaç adet ping atılacağı gibi fieldler bulunmaktadır.
+
+Form doldurulduktan sonra, PingRequest sınıfı devreye girecektir. Bu, Laravel'in sağladığı bir özellik olan Request'tir ve formdan gelen bilgilerin doğruluğunu sağlamaktadır. Eğer bilgiler doğruysa, PingController'a geçilir. Eğer bilgiler doğrulanamazsa, form sayfasına geri yönlendirilir ve eksik olan fieldlerin altında bir hata mesajı yazılır.
+
+PingController, yeni bir görev oluşturarak kullanıcıyı görev listesi sayfasına yönlendirir ve "oluşturuldu" mesajını yazdırır.
+
+Yeni bir görev oluşturulduğunda, Laravel'in bir diğer özelliği olan "Event (Tetikleyici) \& Listener (Dinleyici)" devreye girer.
+
+Event \& Listener: Bu proje, yeni bir görev oluşturulduğunda event tetiklenir ve Listener çalışmaya başlar. Listener aracılığıyla DockerService çalıştırılır. Kullanıcıyı Form sayfasında bekletmemek için Listener kuyruğa alınır ve DockerService işlemi tamamlandıktan sonra görev durumu güncellenir. Başarılıysa 1, başarısızsa 2 olarak bildirilir
 %ibrahim bu kısımda özet yazacak detaylandırılacak
  \subsection {Veritabanı kısmı İçin }
  MySQL veritabanı kullanılarak bir proje için optimize edilmiş bir veritabanı şeması oluşturuldu. Bu şema, "users" (kullanıcılar), "ping" (ping kayıtları) ve "pingcontainers" (ping konteynerleri) adında üç tabloyu içermektedir. Bu düzenleme, veritabanının performansını artırmak ve veri bütünlüğünü sağlamak amacıyla yapılmıştır.\\
@@ -17,7 +35,7 @@ Bu veritabanı şeması, kullanıcıların birden fazla konteyner ve görev olu�
 Bu düzenleme, veritabanının daha etkili bir şekilde veri saklamasını ve verilere hızlı erişim sağlamasını amaçlamaktadır. Ayrıca, veri bütünlüğünü korumak için gereken ilişkileri de sağlamaktadır.\\
  \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{sql.jpg}
+    \includegraphics[width=0.9\textwidth]{images/sql.jpg}
     \caption{Sql ping tabloları}
     \label{fig:resim_etiketi}
   \end{figure}
