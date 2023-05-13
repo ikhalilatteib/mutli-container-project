@@ -1,28 +1,31 @@
 \section{GİRİŞ}
 
 
-\subsection{Projenin İçeriği}
+Paralel işlem, modern bilgisayar sistemlerinde performansı artırmak için yaygın olarak kullanılan bir tekniktir. Ancak, bu teknik, karmaşık paralel işlem yapısı tasarımı ve uygulanması zor ve zaman alıcı olabilir. Bu sorunları çözmek için Docker, çoklu konteynerlar kullanarak paralel işlem yapmak için ideal bir çözüm sunar. Docker, 2013 yılında dotCloud adlı bir Platform as a Service (PaaS) sağlayıcısı tarafından geliştirilmiştir ve kurucusu ve CTO’su Solomon Hykes olarak bilinmektedir.
 
+Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Bu teknoloji, farklı konteynerlar arasında görevleri bölüştürerek, daha hızlı ve verimli bir şekilde çalışan bir sistem oluşturmak için kullanılabilir. Çoklu konteynerlar, birbirleriyle iletişim halinde olan ve her biri farklı bir görevi yerine getiren bir dizi konteynerden oluşan bir yapıdır. Bu yapı, görevler arasında paralelleştirme yapılarak daha hızlı ve verimli bir sistem oluşturulabilir. Konteynerler arasındaki iletişim, Docker Swarm veya Kubernetes gibi konteyner orkestrasyon araçları kullanılarak kolayca yönetilebilir. Bu sayede, tasarım ölçeklenebilir hale getirilebilir.
 
+Bu çalışmada, Laravel PHP kullanılarak bir örnek üzerinde Docker ile çoklu konteynerlar kullanarak paralel işlem yapmanın nasıl oluşturulacağına ve yönetileceğine dair detaylı bilgiler verilecektir. Örneğin veritabanı olarak MySQL kullanılacak. Docker sayesinde, örneğin birden fazla sunucuda birden fazla örneği çalıştırmak mümkün olacak. Böylece, örneğin daha yüksek trafik hacimlerine veya daha karmaşık iş yüklerine ihtiyaç duyulduğunda sistem ölçeklendirilebilir hale getirilebilir.
 
-\subsection{Öğrenciler İçin Projenin Önemi}
+Docker ayrıca, geliştirme sürecini de hızlandırabilir. Örneğin, farklı uygulama ve hizmetleri ayrı ayrı test etmek yerine, Docker sayesinde bunları farklı konteynerlar içinde birleştirmek ve birlikte test etmek mümkün olacak. Bu sayede, uygulama ve hizmetlerin bütünlüğü ve performansı daha iyi bir şekilde test edilebilir. Ayrıca, Docker sayesinde, uygulama ve hizmetlerin herhangi bir sistemde kolayca çalıştırılması ve dağıtılması da mümkün hale gelir.
 
+Sonuç olarak, Docker çoklu konteynerlar kullanarak paralel işlem yapmak için ideal bir  züm sunan bir teknolojidir. Bu sayede, karmaşık paralel işlem yapısı tasarımı ve uygulanması daha kolay ve zaman açısından daha verimli hale gelir.
 
-\subsection{Benzer Projeler}
+Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmaya sağladığı avantajlardan biri, iş yükünü parçalara bölerek her bir parçayı ayrı bir konteyner içinde çalıştırabilme esnekliğidir. Bu, işlemleri paralel olarak gerçekleştirerek performansı artırır. Örneğin, bir web uygulaması üzerinde çalışırken, kullanıcı taleplerini işleyen bir konteyner, veritabanı işlemlerini yapan başka bir konteyner ve resim işleme gibi farklı bir görevi üstlenen bir başka konteyner olabilir. Bu konteynerler, bağımsız olarak çalışabilir ve birbirleriyle iletişim kurabilirler. Bu şekilde, her bir konteyner kendi kaynaklarını etkin bir şekilde kullanarak iş yükünü hızlı ve verimli bir şekilde işleyebilir.
 
+Docker ayrıca, ölçeklendirme kolaylığı sağlar. Yüksek talep veya büyüyen iş yükleri durumunda, Docker Swarm veya Kubernetes gibi konteyner orkestrasyon araçları kullanarak yeni konteyner örnekleri oluşturabilir ve bu konteynerleri mevcut konteyner gruplarına ekleyebilirsiniz. Bu, daha fazla kaynak sağlayarak sistemi ölçeklendirmenize ve iş yükünü dengelemenize yardımcı olur. Aynı şekilde, talep düştüğünde veya iş yükü azaldığında, gereksiz konteyner örneklerini kolayca kaldırabilirsiniz. Bu dinamik ölçeklendirme yeteneği, kaynak kullanımını optimize ederek performansı artırır ve maliyetleri düşürür.
 
+Docker ayrıca, geliştirme sürecini kolaylaştırır ve hızlandırır. Konteyner tabanlı bir geliştirme ortamında, her bir bileşen veya hizmeti ayrı bir konteynerde çalıştırarak, geliştiricilerin uygulama ve hizmetlerin birlikte çalışmasını ve entegrasyonunu daha iyi test etmelerini sağlar. Ayrıca, her bir konteyneri bağımsız olarak güncelleyebilir veya değiştirebilirsiniz, bu da hızlı ve sorunsuz bir şekilde yeni özellikler eklemenize veya hataları düzeltmenize olanak tanır.
 
+Sonuç olarak, Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmaya yönelik sunmuş olduğu çözüm, performansı artırır, ölçeklenebilirlik sağlar, geliştirme sürecini hızlandırır ve sistem yönetimini kolaylaştırır. 
+Docker, paralel işlem  ihtiyaç iyaç duyan projeler için ideal bir çözümdür. Özellikle büyük ölçekli uygulamalar, mikro hizmet mimarileri veya veri yoğun iş yükleriyle çalışan sistemler Docker'ın sağladığı çoklu konteynerlar ile paralel işlem yapma yeteneklerinden büyük ölçüde faydalanabilir.
 
-\subsubsection{Human resource machine}
-Human resource machine oyunu içerisinde iki platform arasında verilerin kod blokları aracılığıyla taşınmasını oynanış olarak ele almaktadır. Giriş platformdan çıkış platformuna verilerin taşınması sırasında özel isteklerde bulunuluyor.  Giriş platformundan alınan iki sayının toplanmasından oluşan verinin çıkış platformuna taşınması örnek verilebilir \cite{k1}.
+Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmanın yanı sıra birçok avantajı vardır. Bunlardan biri, uygulama ve hizmetlerin bağımsız ve izole bir şekilde çalıştırılabilmesidir. Her bir konteyner, kendi ortamını ve bağımsız olarak çalışan bileşenlerini içerir. Bu, uygulama ve hizmetlerin birbirinden etkilenmeden güvenli bir şekilde çalışmasını sağlar.
 
+Ayrıca, Docker'ın konteyner tabanlı mimarisi, uygulama ve hizmetlerin farklı ortamlarda sorunsuz bir şekilde çalışmasını sağlar. Bir konteyneri bir sistemden diğerine taşımak veya farklı bir ortamda çalıştırmak oldukça kolaydır. Bu da geliştirme sürecini hızlandırır ve dağıtım süreçlerini kolaylaştırır.
 
+Docker ayrıca, kaynakların etkin bir şekilde kullanılmasını sağlar. Her bir konteyner, sadece ihtiyaç duyduğu kaynakları kullanır ve izole edilmiş olduğu için diğer konteynerlere etki etmez. Bu sayede, sistemdeki kaynakların verimli bir şekilde dağıtılması ve kullanılması sağlanır.
 
-\subsubsection{Scratch}
-Genel olarak çocukları hedef alan bir uygulamadır. Çocukların kendi animasyonlarını ve oyunlarını yapabilmeleri istenmiştir. Çocukların yaptığı çalışmaları arkadaşlarına ve topluluklarına paylaşma imkanı sağlar.
+Son olarak, Docker ekosistemi geniş bir topluluk tarafından desteklenmektedir. Docker Hub gibi bir merkezi depo, hazır konteyner görüntülerini paylaşmanıza ve kullanmanıza olanak tanır. Ayrıca, Docker, zengin bir API ve komut satırı arayüzü ile birlikte gelir, bu da otomasyon ve yönetim süreçlerini kolaylaştırır.
 
-\subsubsection{MBlock}
-Scratch uygulamasının altyapısını kullanan bir uygulamadır. Scratch ile birebir özelliklere sahiptir. Scratch uygulamasının mobilde her cihazda çalışmaması gibi sorunları çözmektedir.
-
-\subsubsection{Projenin github linki}
-Proje kaynak kod olarak aşağıdaki github linkinde sunulmuştur.
+Docker'ın çoklu konteynerlar kullanarak paralel işlem yapma yetenekleri, modern bilgisayar sistemlerinde performansı artırmak ve verimliliği sağlamak için güçlü bir araçtır. Karmaşık iş yüklerini parçalara ayırarak, her bir parçayı ayrı bir konteynerde çalıştırarak ve konteynerler arasında iletişimi kolayca yöneterek, daha hızlı, ölçeklenebilir ve etkili bir sistem oluşturmak mümkündür. Bu nedenle, Docker, paralel işlem yapmak isteyen geliştiriciler ve sistem yöneticileri için önemli bir teknoloji ve çözüm sunmaktadır.
