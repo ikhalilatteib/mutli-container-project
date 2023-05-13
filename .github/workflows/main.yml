@@ -14,21 +14,21 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: 0BMproje.tex
+          root_file: 0BMbitirme.tex
       - name: 'Tar files'
-        run: tar -cvf 0BMproje.tar /home/runner/work/computer-networks/
-      - name: 'Upload 0BMproje'
+        run: tar -cvf 0BMbitirme.tar /home/runner/work/computer-networks/
+      - name: 'Upload 0BMbitirme'
         uses: actions/upload-artifact@v2
         with:
-         name: 0BMproje
-         path: 0BMproje.tar    
+         name: 0BMbitirme
+         path: 0BMbitirme.tar    
       - uses: actions/download-artifact@v3
         with:
-          name: 0BMproje
+          name: 0BMbitirme
       - name: Commit and push changes
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add /home/runner/work/computer-networks/computer-networks/0BMproje.pdf -f
+          git add /home/runner/work/computer-networks/computer-networks/0BMbitirme.pdf -f
           git commit -m "Güncel PDF eklendi"
           git push
