@@ -66,7 +66,51 @@ Docker'ın avantajları şunlardır:
 Docker'ın bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.
 
 Neden Docker ?\\
-%yazılacak
+Docker, bir yazılımın uygulama ve bağımlılıklarını bir "konteyner" olarak paketlemek ve çalıştırmak için kullanılan bir platformdur. Docker'ın sanal makinelerden farklı olarak konteynerizasyon teknolojisi üzerine kurulu olması, birkaç önemli avantaj sunmaktadır:\\
+\begin{itemize}
+\item Daha hafif ve hızlı: Sanal makineler (VM'ler), her biri kendi işletim sistemini çalıştıran ayrı bir sanal makine olduğundan, daha fazla kaynak tüketir ve yavaş çalışabilir. Docker konteynerleri ise ana işletim sistemini paylaşır ve sadece uygulama ve bağımlılıkları içerir. Bu nedenle, Docker konteynerleri daha hafif ve daha hızlıdır.\\
+
+\item Daha verimli kaynak kullanımı: Docker, aynı fiziksel makine üzerinde birden çok konteyner çalıştırabilme yeteneği sayesinde kaynakları daha verimli kullanmanızı sağlar. Sanal makinelerde her bir VM, kendi işletim sistemini çalıştırdığından kaynak israfı yaşanabilirken, Docker konteynerleri aynı işletim sistemini paylaşarak daha etkili bir kaynak yönetimi sağlar.\\
+
+\item Taşınabilirlik ve uyumluluk: Docker konteynerleri, uygulama ve bağımlılıklarını bir araya getirdiği için taşınabilirlik ve uyumluluk sağlar. Konteynerler, herhangi bir ortamda, herhangi bir makinede aynı şekilde çalışabilir. Bir kez oluşturulduklarında, Docker konteynerleri kolayca dağıtılabilir ve başka bir makineye taşınabilir.\\
+
+\item Hızlı dağıtım ve ölçeklendirme: Docker konteynerleri, uygulamaların hızlı dağıtımını ve ölçeklendirilmesini sağlar. Konteynerlerin hızlı bir şekilde başlatılması ve durdurulması mümkündür. Ayrıca, bir uygulamayı birden çok konteyner olarak çalıştırarak yüksek kullanılabilirlik ve ölçeklenebilirlik elde etmek kolaydır.\\
+
+\item İzolasyon ve güvenlik: Docker konteynerleri, birbirinden izole edilmiş çalışma ortamları sağlar. Her konteyner, kendi dosya sistemini, ağ bağlantılarını ve süreçlerini izole eder. Bu, bir konteynerin diğerlerinden etkilenmeyeceği anlamına gelir, böylece daha güvenli bir ortam sağlar.\\
+\end{itemize}
+
+\textbf{Docker vs Sanal Makianlar} \\
+Sanal makine (VM) teknolojisi, ayrı işletim sistemleri ve bağımsız çalışma ortamları sağlar. Her bir sanal makine, kendi işletim sistemi, yazılım yığını ve kaynaklara sahip bir sanal bilgisayardır. VM'ler, fiziksel makine üzerinde çalışırken, her biri kendi kaynaklara sahip olduğundan izolasyon sağlarlar. Bu, farklı işletim sistemlerini aynı fiziksel makinede çalıştırmanın bir yolunu sunar. Ancak, VM'lerin daha fazla bellek, işlemci gücü ve depolama alanı gibi kaynaklara ihtiyaç duyması ve daha yavaş çalışması dezavantajlarından bazılarıdır.\\
+
+Docker konteynerleri, hafif ve taşınabilir uygulama çalıştırma birimleridir. Docker, aynı çekirdek üzerinde çalışan ve paylaşılan kaynakları kullanan konteynerleştirilmiş uygulamaları yönetmek için bir platform sağlar. Her bir Docker konteyneri, izole bir çalışma ortamı sunar, ancak farklı bir işletim sistemi çalıştırmak yerine, ana makinedeki işletim sistemi ve çekirdek üzerinde çalışır. Bu, daha düşük bellek kullanımı ve daha hızlı başlatma süreleri gibi avantajlar sağlar. Ayrıca, Docker konteynerleri uygulama dağıtımını kolaylaştırır ve yazılımın farklı ortamlarda tutarlı bir şekilde çalışmasını sağlar.\\
+Biz sanal makina olarak VirtualBox'ı baz alacağız.\\
+\\\textbf{Docker vs VirtualBox}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+      \hline
+      \textbf{Docker} & \textbf{VirtualBox} \\
+      \hline
+      Konteyner tabanlı sanallaştırma & Tam sanallaştırma \\
+      \hline
+      Aynı çekirdek üzerinde çalışır & Farklı işletim sistemlerini çalıştırır \\
+      \hline
+      Hafif ve taşınabilir konteynerler & Tam işletim sistemine sahip sanal makineler \\
+      \hline
+      İzole çalışma ortamı sağlar & İzole çalışma ortamı sağlar \\
+      \hline
+      Daha düşük bellek kullanımı ve hızlı başlatma & Daha fazla kaynak gerektirir \\
+      \hline
+      Uygulama dağıtımını kolaylaştırır & Farklı işletim sistemlerinin testi için kullanılır \\
+      \hline
+      Docker Hub'da konteyner görüntüleri paylaşabilir & Sanal makine görüntüleri kullanılabilir \\
+      \hline
+      Microservisler ve ölçeklenebilir uygulama geliştirmeleri & Özel izolasyon gerektiren durumlar \\
+      \hline
+    \end{tabular}
+    \caption{Docker vs. VirtualBox}
+  \end{table}
+  
 \subsection{Veri Tabanı İçin }
 \subsubsection{MYSQL}
 MySQL, açık kaynaklı bir ilişkisel veritabanı yönetim sistemidir. İlişkisel veritabanı yönetim sistemleri, verileri tablolarda saklayarak veriler arasındaki ilişkileri yönetmeyi sağlar. MySQL, istemci-sunucu modeline dayalı olarak çalışır ve bir sunucu üzerinde çalışan çok kullanıcılı bir veritabanı sistemidir.
