@@ -29,13 +29,22 @@ Sonuç olarak, Docker kullanarak paralel işlem yapabilen bir sistem tasarladık
 
 Bu proje sayesinde, paralel işlem yapabilen sistemlerin performansını artırma, esneklik sağlama ve güvenliği sağlama konularında önemli bir deneyim kazandık.
 \section{KULLANILAN YAZILIMLAR VE YÖNTEMLER}
-
+\subsection{Neden Tercih Ettik ?}
+\textbf{Laravel}, web uygulamaları için tercih ettiğimiz bir framework'tür. MVC yapısı ve geliştirme kolaylığı sağlar. Hazır bileşenleriyle hızlı ve verimli bir şekilde uygulama geliştirebiliriz. Geniş topluluğuyla destek alabileceğimiz bir kaynağa sahiptir. Bu nedenlerle, Laravel'i tercih ettik.\\
+\textbf{Docker'ı} tercih etmemizin nedeni, uygulamaların izole edilmiş, taşınabilir ve hızlı bir şekilde dağıtılmasını sağlayan konteyner teknolojisiyle geliştirme ve dağıtım süreçlerini kolaylaştırmasıdır.\\
+\textbf{MySQLi}, MySQL veritabanı ile PHP arasında bir bağlantı sağlayan bir PHP eklentisidir. MySQLi'nin tercih edilmesinin nedeni, gelişmiş özellikleri, performans iyileştirmeleri ve güvenlik önlemleriyle MySQL ile daha etkili ve güvenli bir şekilde etkileşim sağlamasını sağlamasıdır.
 \subsection{Web Uygulama Geliştirmek İçin}
 \subsubsection{Laravel }
 Laravel, popüler bir PHP framework'üdür ve MVC (Model-View-Controller) mimarisini kullanır. Bu mimari, uygulamanın farklı katmanlarını ayırarak kodun düzenli, okunabilir ve bakımı kolay hale gelmesini sağlar. Laravel, model, view, controller ve route gibi temel bileşenlerden oluşur. Model, veri katmanını temsil ederken, view kullanıcı arayüzünü ve controller iş mantığını yönetir. Route ise istekleri doğru controller'a yönlendirir.\\
 
 Laravel'in MVC yapısı, kodun düzenli tutulmasını, bileşenlerin bağımsız olmasını ve geliştirme sürecinin daha etkili olmasını sağlar. Bu sayede uygulama daha yeniden kullanılabilir, test edilebilir ve bakımı kolay hale gelir.
+\subsubsection{Kullanım Kolaylığı:}
 
+Laravel, kullanıcı dostu ve kolay bir kullanım deneyimi sunar. Gelişmiş komut satırı araçları, hazır bileşenler ve entegre özellikler sayesinde hızlı bir şekilde uygulama geliştirebilirsiniz. Laravel'in sunduğu Artisan komut satırı aracı, geliştirme sürecini hızlandırır ve tekrarlayan görevleri otomatikleştirir. Artisan komutları, veritabanı yönetimi, migrasyonlar, testlerin çalıştırılması, güvenlik kontrolleri ve daha birçok işlemi kolaylıkla gerçekleştirmenizi sağlar.
+
+Ayrıca, Laravel'in içerdiği hazır bileşenler ve entegre özellikler, geliştirme sürecini daha da kolaylaştırır. Örneğin, kimlik doğrulama ve yetkilendirme sistemleri gibi önemli işlevlerin birçoğu Laravel'de hazır olarak sunulur ve uygulamanızı güvenli hale getirmek için kolayca kullanılabilir. Ayrıca, oturum yönetimi, önbellekleme, e-posta gönderme, dosya depolama ve diğer yaygın kullanılan işlevler için Laravel'in entegre özelliklerinden yararlanabilirsiniz.
+\subsubsection{MVC Mimari ve Yapılandırma: }
+Laravel'in Model-View-Controller (MVC) mimarisi, uygulamanın farklı katmanlarını ayırarak kodun düzenli tutulmasını ve bakımını kolaylaştırır. Model, view ve controller bileşenleri arasındaki net ayrım, iş mantığının yönetimini ve kullanıcı arayüzünün ayrı tutulmasını sağlar.
 \subsection{Konteynerize Etmek İçin  }
 \subsubsection{Docker}
 Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Docker, konteyner teknolojisi kullanarak uygulamaların izole edilmiş ve taşınabilir bir şekilde çalışmasını sağlar.
