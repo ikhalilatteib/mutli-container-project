@@ -33,22 +33,27 @@ Bu proje sayesinde, paralel işlem yapabilen sistemlerin performansını artırm
 \textbf{Laravel}, web uygulamaları için tercih ettiğimiz bir framework'tür. MVC yapısı ve geliştirme kolaylığı sağlar. Hazır bileşenleriyle hızlı ve verimli bir şekilde uygulama geliştirebiliriz. Geniş topluluğuyla destek alabileceğimiz bir kaynağa sahiptir. Bu nedenlerle, Laravel'i tercih ettik.\\
 \textbf{Docker'ı} tercih etmemizin nedeni, uygulamaların izole edilmiş, taşınabilir ve hızlı bir şekilde dağıtılmasını sağlayan konteyner teknolojisiyle geliştirme ve dağıtım süreçlerini kolaylaştırmasıdır.\\
 \textbf{MySQLi}, MySQL veritabanı ile PHP arasında bir bağlantı sağlayan bir PHP eklentisidir. MySQLi'nin tercih edilmesinin nedeni, gelişmiş özellikleri, performans iyileştirmeleri ve güvenlik önlemleriyle MySQL ile daha etkili ve güvenli bir şekilde etkileşim sağlamasını sağlamasıdır.
-\subsection{Web Uygulama Geliştirmek İçin}
-\subsubsection{Laravel }
+\subsection{Web Uygulama Geliştirmek İçin \textbf{Laravel}}
 Laravel, popüler bir PHP framework'üdür ve MVC (Model-View-Controller) mimarisini kullanır. Bu mimari, uygulamanın farklı katmanlarını ayırarak kodun düzenli, okunabilir ve bakımı kolay hale gelmesini sağlar. Laravel, model, view, controller ve route gibi temel bileşenlerden oluşur. Model, veri katmanını temsil ederken, view kullanıcı arayüzünü ve controller iş mantığını yönetir. Route ise istekleri doğru controller'a yönlendirir.\\
 
 Laravel'in MVC yapısı, kodun düzenli tutulmasını, bileşenlerin bağımsız olmasını ve geliştirme sürecinin daha etkili olmasını sağlar. Bu sayede uygulama daha yeniden kullanılabilir, test edilebilir ve bakımı kolay hale gelir.
 \subsubsection{Kullanım Kolaylığı:}
-
 Laravel, kullanıcı dostu ve kolay bir kullanım deneyimi sunar. Gelişmiş komut satırı araçları, hazır bileşenler ve entegre özellikler sayesinde hızlı bir şekilde uygulama geliştirebilirsiniz. Laravel'in sunduğu Artisan komut satırı aracı, geliştirme sürecini hızlandırır ve tekrarlayan görevleri otomatikleştirir. Artisan komutları, veritabanı yönetimi, migrasyonlar, testlerin çalıştırılması, güvenlik kontrolleri ve daha birçok işlemi kolaylıkla gerçekleştirmenizi sağlar.
-
 Ayrıca, Laravel'in içerdiği hazır bileşenler ve entegre özellikler, geliştirme sürecini daha da kolaylaştırır. Örneğin, kimlik doğrulama ve yetkilendirme sistemleri gibi önemli işlevlerin birçoğu Laravel'de hazır olarak sunulur ve uygulamanızı güvenli hale getirmek için kolayca kullanılabilir. Ayrıca, oturum yönetimi, önbellekleme, e-posta gönderme, dosya depolama ve diğer yaygın kullanılan işlevler için Laravel'in entegre özelliklerinden yararlanabilirsiniz.
 \subsubsection{MVC Mimari ve Yapılandırma: }
 Laravel'in Model-View-Controller (MVC) mimarisi, uygulamanın farklı katmanlarını ayırarak kodun düzenli tutulmasını ve bakımını kolaylaştırır. Model, view ve controller bileşenleri arasındaki net ayrım, iş mantığının yönetimini ve kullanıcı arayüzünün ayrı tutulmasını sağlar.
-\subsection{Konteynerize Etmek İçin  }
-\subsubsection{Docker}
+\subsubsection{Etkili Veritabanı Yönetimi: }Laravel, veritabanı işlemlerini kolaylaştıran bir ORM (Object-Relational Mapping) olan Eloquent'i içerir. Eloquent, veritabanı sorgularını nesne odaklı bir şekilde yapmanızı sağlar ve veritabanı işlemlerini hızlı ve verimli bir şekilde gerçekleştirmenizi sağlar.
+\subsubsection{Veritabanı Şeması:} Laravel'in sağladığı göç (migration) sistemini kullanarak, veritabanı şemasını kolayca oluşturabilir ve değişiklikleri yönetebilirsiniz. Bu, uygulamanızın veritabanı yapısını güncellemek ve yönetmek için esneklik sağlar.
+\subsubsection{Güvenlik ve Oturum Yönetimi:}
+Laravel, güvenlik önlemleriyle donatılmıştır. Oturum yönetimi, kimlik doğrulama ve yetkilendirme gibi güvenlik işlemlerini kolayca uygulamanızı sağlar.
+\subsubsection{Geniş Ekosistem ve Topluluk Desteği: }
+Laravel, büyük bir geliştirici topluluğuna sahiptir ve aktif bir ekosistemi vardır. Laravel Forge, Laravel Nova, Laravel Horizon gibi araçlar ve paketlerle işleri kolaylaştırabilir ve projenizi hızlandırabilirsiniz. Ayrıca, Laravel ile ilgili belgeler, kaynaklar ve topluluk destekleri kolayca erişilebilir.
+\subsection{Konteynerize Etmek İçin \textbf{Docker }}
+\subsubsection{Docker Nedir?}
+
 Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Docker, konteyner teknolojisi kullanarak uygulamaların izole edilmiş ve taşınabilir bir şekilde çalışmasını sağlar.
 
+\subsubsection{Docker'ın çalışma yapısı }
 Docker'ın çalışma yapısı şu şekildedir:
 \begin{itemize}
 \item Konteyner: Docker'ın temel yapı birimidir. Konteyner, uygulamanın tüm bağımlılıklarını (kod, çalışma zamanı, kütüphaneler, ortam değişkenleri vb.) bir araya getirir ve izole bir ortamda çalışmasını sağlar. Konteynerlar, bir uygulamayı çalıştırmak için gerekli olan tüm bileşenleri içerir ve bu sayede uygulamaları farklı ortamlarda tutarlı bir şekilde çalıştırabilirsiniz.
@@ -60,7 +65,7 @@ Docker'ın çalışma yapısı şu şekildedir:
 \item Docker Registry: Docker imajlarının depolandığı ve paylaşıldığı bir merkezi kaynak. Docker Hub, en popüler ve yaygın kullanılan Docker Registry'dir. Docker Hub'da, birçok hazır Docker imajı bulabilir ve kendi imajlarınızı da paylaşabilirsiniz. Ayrıca, Docker Registry'lerini yerel olarak da kurabilir ve kullanabilirsiniz.
 \end{itemize}
 
-
+\subsubsection{Docker'ın avantajları }
 Docker'ın avantajları şunlardır:
 \begin{itemize}
 \item Taşınabilirlik: Docker, uygulamaların farklı platformlarda ve ortamlarda sorunsuz bir şekilde çalışmasını sağlar. Bir kez oluşturulan Docker imajı, farklı sistemlerde kolayca dağıtılabilir ve çalıştırılabilir.
@@ -82,7 +87,7 @@ Docker'ın avantajları şunlardır:
 
 Docker'ın bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.
 
-Neden Docker ?\\
+\subsubsection{Neden Docker ?}
 Docker, bir yazılımın uygulama ve bağımlılıklarını bir "konteyner" olarak paketlemek ve çalıştırmak için kullanılan bir platformdur. Docker'ın sanal makinelerden farklı olarak konteynerizasyon teknolojisi üzerine kurulu olması, birkaç önemli avantaj sunmaktadır:\\
 \begin{itemize}
 \item Daha hafif ve hızlı: Sanal makineler (VM'ler), her biri kendi işletim sistemini çalıştıran ayrı bir sanal makine olduğundan, daha fazla kaynak tüketir ve yavaş çalışabilir. Docker konteynerleri ise ana işletim sistemini paylaşır ve sadece uygulama ve bağımlılıkları içerir. Bu nedenle, Docker konteynerleri daha hafif ve daha hızlıdır.\\
@@ -95,8 +100,29 @@ Docker, bir yazılımın uygulama ve bağımlılıklarını bir "konteyner" olar
 
 \item İzolasyon ve güvenlik: Docker konteynerleri, birbirinden izole edilmiş çalışma ortamları sağlar. Her konteyner, kendi dosya sistemini, ağ bağlantılarını ve süreçlerini izole eder. Bu, bir konteynerin diğerlerinden etkilenmeyeceği anlamına gelir, böylece daha güvenli bir ortam sağlar.\\
 \end{itemize}
+Docker komutlarını ve açıklamalarını içeren Tablo \ref{tab:docker-komutlar}.'da görebilirsiniz.
+\begin{table}[h]
+  \centering
+  \caption{Docker Komutları ve Açıklamaları}
+  \label{tab:docker-komutlar}
+  \begin{tabular}{|p{0.3\textwidth}|p{0.6\textwidth}|}
+  \hline
+  \textbf{Komut} & \textbf{Açıklama} \\ \hline
+  docker run & Bir konteynerin başlatılması ve çalıştırılması için kullanılır. \\ \hline
+  docker stop & Çalışan bir konteyneri durdurmak için kullanılır. \\ \hline
+  docker build & Bir Docker imajının oluşturulması için kullanılır. \\ \hline
+  docker push & Bir Docker imajının uzak bir imaj deposuna yüklenmesi için kullanılır. \\ \hline
+  docker pull & Bir Docker imajının uzak bir imaj deposundan indirilmesi için kullanılır. \\ \hline
+  docker exec & Çalışan bir konteynere komut çalıştırmak için kullanılır. \\ \hline
+  docker ps & Çalışan konteynerleri listelemek için kullanılır. \\ \hline
+  docker images & Oluşturulmuş Docker imajlarını listelemek için kullanılır. \\ \hline
+  \end{tabular}
+  \end{table}
+  
 
-\textbf{Docker vs Sanal Makianlar} \\
+  
+
+\subsubsection{Docker vs Sanal Makianlar}
 Sanal makine (VM) teknolojisi, ayrı işletim sistemleri ve bağımsız çalışma ortamları sağlar. Her bir sanal makine, kendi işletim sistemi, yazılım yığını ve kaynaklara sahip bir sanal bilgisayardır. VM'ler, fiziksel makine üzerinde çalışırken, her biri kendi kaynaklara sahip olduğundan izolasyon sağlarlar. Bu, farklı işletim sistemlerini aynı fiziksel makinede çalıştırmanın bir yolunu sunar. Ancak, VM'lerin daha fazla bellek, işlemci gücü ve depolama alanı gibi kaynaklara ihtiyaç duyması ve daha yavaş çalışması dezavantajlarından bazılarıdır.\\
 \begin{figure}[]
     \centering
@@ -106,42 +132,56 @@ Sanal makine (VM) teknolojisi, ayrı işletim sistemleri ve bağımsız çalış
   \end{figure}
 Docker konteynerleri, hafif ve taşınabilir uygulama çalıştırma birimleridir. Docker, aynı çekirdek üzerinde çalışan ve paylaşılan kaynakları kullanan konteynerleştirilmiş uygulamaları yönetmek için bir platform sağlar. Her bir Docker konteyneri, izole bir çalışma ortamı sunar, ancak farklı bir işletim sistemi çalıştırmak yerine, ana makinedeki işletim sistemi ve çekirdek üzerinde çalışır. Bu, daha düşük bellek kullanımı ve daha hızlı başlatma süreleri gibi avantajlar sağlar. Ayrıca, Docker konteynerleri uygulama dağıtımını kolaylaştırır ve yazılımın farklı ortamlarda tutarlı bir şekilde çalışmasını sağlar.\\
 Biz sanal makina olarak VirtualBox'ı baz alacağız.\\
-\\\textbf{Docker vs VirtualBox}
+Tablo \ref{tab:docker-virtualbox} Docker ile VirtualBox arasındaki karşılaştırmayı göstermektedir.\\
+\subsubsection{Docker vs VirtualBox}
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+    \hline
+    \textbf{Docker} & \textbf{VirtualBox} \\
+    \hline
+    Konteyner tabanlı sanallaştırma & Tam sanallaştırma \\
+    \hline
+    Aynı çekirdek üzerinde çalışır & Farklı işletim sistemlerini çalıştırır \\
+    \hline
+    Hafif ve taşınabilir konteynerler & Tam işletim sistemine sahip sanal makineler \\
+    \hline
+    İzole çalışma ortamı sağlar & İzole çalışma ortamı sağlar \\
+    \hline
+    Daha düşük bellek kullanımı ve hızlı başlatma & Daha fazla kaynak gerektirir \\
+    \hline
+    Uygulama dağıtımını kolaylaştırır & Farklı işletim sistemlerinin testi için kullanılır \\
+    \hline
+    Docker Hub'da konteyner görüntüleri paylaşabilir & Sanal makine görüntüleri kullanılabilir \\
+    \hline
+    Microservisler ve ölçeklenebilir uygulama geliştirmeleri & Özel izolasyon gerektiren durumlar \\
+    \hline
+  \end{tabular}
+  \caption{Docker vs. VirtualBox}
+  \label{tab:docker-virtualbox}
+\end{table}
+\subsection{Veri Tabanı İçin \textbf{MYSQL }}
+\subsubsection{MYSQL Nedir?}
+MySQLi, PHP ile MySQL veritabanına erişmek için kullanılan gelişmiş bir PHP eklentisidir. MySQLi, MySQL eklentisine göre daha fazla özellik ve performans sağlar. Bu eklenti, PHP'nin dahili fonksiyonları ve sınıfları aracılığıyla MySQL sunucusuna bağlanma, sorgu yürütme, veri ekleme, güncelleme, silme gibi veritabanı işlemlerini kolaylıkla gerçekleştirme imkanı sunar. MySQLi'nin nesne yönelimli programlama (OOP) sınıfları, parametreli sorguların kullanımı, hata yönetimi ve bağlantı kontrolü gibi gelişmiş özellikleri sayesinde veritabanı işlemleri daha güvenli, verimli ve esnek hale gelir. Bu nedenle, MySQLi, PHP projelerinde MySQL veritabanına erişmek için tercih edilen bir seçenektir.
+
+MySQL, açık kaynaklı bir ilişkisel veritabanı yönetim sistemidir ve verileri tablolarda saklayarak ilişkileri yönetmeyi sağlar. İstemci-sunucu modeline dayanan bu çok kullanıcılı veritabanı sistemi, bir sunucu üzerinde çalışır. MySQL, hızlı, güvenilir ve geniş bir kullanıcı tabanına sahiptir. Ayrıca, geniş uyumluluk listesi sayesinde farklı programlama dilleri ve platformlarla kolayca entegre olabilir. Veritabanı yönetimi, veri manipülasyonu, sorgulama, güvenlik, yedekleme ve geri yükleme gibi birçok temel işlemi destekler. Bu nedenlerle MySQL, web uygulamalarında ve büyük ölçekli sistemlerde sıkça tercih edilen bir veritabanı çözümüdür. Yüksek performans, ölçeklenebilirlik ve kullanıcı dostu arayüz gibi önemli özelliklere sahiptir, veri tabanı yönetimi için güçlü ve esnek bir seçenektir.
+\subsubsection{Özellikler ve Avantajlar:}
+MySQL, geniş kullanıcı tabanıyla tanınan hızlı ve güvenilir bir veritabanı yönetim sistemidir. Veri manipülasyonu, sorgulama, güvenlik, yedekleme ve geri yükleme gibi temel veritabanı işlemlerini başarılı bir şekilde destekler. Ayrıca, MySQL geniş bir uyumluluk listesine sahiptir ve farklı programlama dilleri ve platformlarla kolayca entegre olabilir. Veri bütünlüğünü koruma, güvenlik, yüksek performans, ölçeklenebilirlik ve kullanıcı dostu bir arayüz gibi önemli özellikleriyle öne çıkar. Bu özellikleri sayesinde MySQL, veritabanı yönetimi için güçlü bir seçenek olarak tercih edilmektedir.
+
+\subsubsection{Kullanım Alanları:}
+MySQL, geniş ölçekteki web uygulamaları ve büyük sistemlerde yaygın olarak kullanılan etkili bir veritabanı çözümüdür. Verilerin etkin bir şekilde saklanmasını ve yönetilmesini sağlayarak projelerin gereksinimlerini karşılar. Güçlü ve esnek yapısıyla veritabanı yönetimi için tercih edilen MySQL, veri tabanlarının güvenli ve verimli bir şekilde işlenmesini sağlar.
+\subsubsection{MYSQL vs PostegreSQL}
 \begin{table}[!h]
     \centering
-    \begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+    \begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}
       \hline
-      \textbf{Docker} & \textbf{VirtualBox} \\
-      \hline
-      Konteyner tabanlı sanallaştırma & Tam sanallaştırma \\
-      \hline
-      Aynı çekirdek üzerinde çalışır & Farklı işletim sistemlerini çalıştırır \\
-      \hline
-      Hafif ve taşınabilir konteynerler & Tam işletim sistemine sahip sanal makineler \\
-      \hline
-      İzole çalışma ortamı sağlar & İzole çalışma ortamı sağlar \\
-      \hline
-      Daha düşük bellek kullanımı ve hızlı başlatma & Daha fazla kaynak gerektirir \\
-      \hline
-      Uygulama dağıtımını kolaylaştırır & Farklı işletim sistemlerinin testi için kullanılır \\
-      \hline
-      Docker Hub'da konteyner görüntüleri paylaşabilir & Sanal makine görüntüleri kullanılabilir \\
-      \hline
-      Microservisler ve ölçeklenebilir uygulama geliştirmeleri & Özel izolasyon gerektiren durumlar \\
-      \hline
-    \end{tabular}
-    \caption{Docker vs. VirtualBox}
-  \end{table}
-  
-\subsection{Veri Tabanı İçin }
-\subsubsection{MYSQL}
-MySQL, açık kaynaklı bir ilişkisel veritabanı yönetim sistemidir. İlişkisel veritabanı yönetim sistemleri, verileri tablolarda saklayarak veriler arasındaki ilişkileri yönetmeyi sağlar. MySQL, istemci-sunucu modeline dayalı olarak çalışır ve bir sunucu üzerinde çalışan çok kullanıcılı bir veritabanı sistemidir.
-
-MySQL, hızlı, güvenilir ve geniş bir kullanıcı tabanına sahip olmasıyla bilinir. Veritabanı yönetimi, veri manipülasyonu, sorgulama, güvenlik, yedekleme ve geri yükleme gibi birçok temel veritabanı işlemini destekler. Ayrıca, MySQL'in geniş bir uyumluluk listesi vardır ve farklı programlama dilleri ve platformlarla kolayca entegre olabilir.
-
-MySQL, birçok web uygulamasında ve büyük ölçekli sistemlerde kullanılan yaygın bir veritabanı çözümüdür. Veri bütünlüğünü koruma, veritabanı güvenliği, yüksek performans, ölçeklenebilirlik ve kullanıcı dostu bir arayüz gibi önemli özelliklere sahiptir.
-
-MySQL, veri tabanı yönetimi için güçlü ve esnek bir seçenek olup, çeşitli projelerde verilerin etkin bir şekilde saklanmasını ve yönetilmesini sağlar.
-
-% resimler eklenecek 
-
+      \textbf{MySQL} & \textbf{PostgreSQL} \\ \hline
+      Açık kaynaklı bir ilişkisel veritabanı yönetim sistemi. & Açık kaynaklı bir ilişkisel veritabanı yönetim sistemi. \\ \hline
+      Hızlı performans ve geniş bir kullanıcı tabanına sahip. & Gelişmiş özellikleri ve veri bütünlüğü konusunda güçlü destek. \\ \hline
+      Ölçeklenebilir ve büyük ölçekli sistemlerde yaygın olarak kullanılır. & Veri bütünlüğünü koruma ve güvenlik açısından güçlü bir seçenektir. \\ \hline
+      Kolayca farklı platformlar ve programlama dilleriyle entegre olabilir. & Yüksek performans ve sorgu optimizasyonu sunar. \\ \hline
+      Düşük sistem gereksinimleri ve hafif bir yapıya sahip. & Tutarlılık ve bütünlük sağlayan bir transaksiyon yönetim sistemi sunar. \\ \hline
+      \end{tabular}
+    \caption{MySQL ve PostgreSQL Karşılaştırması}
+    \label{tab:mysql-postgresql}
+\end{table}
