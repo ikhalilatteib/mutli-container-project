@@ -1,6 +1,26 @@
+\section{Docker ile Çoklu Konteynerlar Kullanarak Paralel İş Yapan Sistem Tasarımını Seçme Nedenlerimiz}
+Günümüzde teknolojik projelerin karmaşıklığı ve iş yükünün artmasıyla birlikte, verimli ve ölçeklenebilir bir altyapı tasarımı büyük önem taşımaktadır.
+ Bu noktada, Docker ile çoklu konteynerlar kullanarak paralel iş yapan sistem tasarımı, proje için ideal bir çözüm olarak karşımıza çıkmıştır.
+  Bu yazıda, neden Docker ve çoklu konteynerlar üzerine bir sistem tasarımı seçtiğimiz açıklandı.\\
+\begin{itemize}
+   \item Hafif ve Taşınabilir Konteynerler:
+    Docker, hafif ve taşınabilir konteyner teknolojisi sunmaktadır. Her bir konteyner, uygulamaların ve bileşenlerin izole bir şekilde çalışmasını sağlar. Bu özellik, projemizde her bir iş parçacığını ayrı bir konteynerde çalıştırarak paralel işlem yapmamıza olanak tanır. Ayrıca, konteynerlerin taşınabilir olması, farklı ortamlarda kolayca dağıtım yapmamızı sağlar.
+    
+   \item  Ölçeklenebilirlik:
+    Docker ve çoklu konteynerlar, projemizin ölçeklenebilirliğini artırmak için ideal bir yapı sağlar. İhtiyaç duydukça yeni konteynerler oluşturabilir ve sistemi yatay olarak genişletebiliriz. Bu sayede, artan iş yüküne kolayca uyum sağlayabilir ve sistem performansını istenilen seviyede tutabiliriz.
+    
+   \item Kolay Dağıtım ve Yönetim:
+    Docker, konteynerlerin dağıtımını ve yönetimini kolaylaştıran bir araç sunar. Konteynerlerin Docker Hub gibi bir merkezi depoda paylaşılabilmesi, projemizin dağıtım sürecini hızlandırır ve yazılım sürümlerini güncelleme kolaylığı sağlar. Ayrıca, Docker'ın sağladığı araçlar ve komutlarla konteynerleri kolayca yönetebilir, izleyebilir ve sorunları hızla tespit edebiliriz.
+    
+   \item İzolasyon ve Güvenlik:
+    Her bir konteyner, izole bir çalışma ortamı sağlar. Bu, her bir iş parçacığının birbirinden bağımsız olarak çalışmasını ve bir sorun durumunda diğerlerini etkilememesini sağlar. Böylece, projemizin güvenlik ve kararlılık açısından daha güçlü bir yapıya sahip olmasını sağlarız.
+    \end{itemize}
+    Docker ile çoklu konteynerlar kullanarak paralel iş yapan sistem tasarımını seçmemizin temel nedenleri yukarıda belirtildiği gibi hafiflik, taşınabilirlik, ölçeklenebilirlik, kolay dağıtım ve yönetim, izolasyon ve güvenlik gibi avantajlardır. Bu tasarım yaklaşımı, projenin gereksinimlerini karşılamak ve iş yükünü etkin bir şekilde yönetmek için ideal bir çözüm sunmaktadır.
+
+Docker'ın konteynerleştirme teknolojisi, iş parçacıklarını izole ederek paralel işlem yapmayı sağlar. Bu da projenin performansını artırırken, ölçeklenebilirliğini ve esnekliğini de sağlar. Ayrıca, Docker'ın sunduğu araçlar ve kolay yönetim özellikleri, projenin dağıtımını ve güncellemelerini hızlandırırken, sistem yönetimini de kolaylaştırır.
+
+Tüm bu avantajlar göz önüne alındığında, Docker ile çoklu konteynerlar kullanarak paralel iş yapan sistem tasarımını seçmek, projenin başarılı bir şekilde büyümesini ve gereksinimlerini karşılamasını sağlayacak stratejik bir tercihtir.
 \section{GİRİŞ}
-
-
 Paralel işlem, modern bilgisayar sistemlerinde performansı artırmak için yaygın olarak kullanılan bir tekniktir. Ancak, bu teknik, karmaşık paralel işlem yapısı tasarımı ve uygulanması zor ve zaman alıcı olabilir. Bu sorunları çözmek için Docker, çoklu konteynerlar kullanarak paralel işlem yapmak için ideal bir çözüm sunar. Docker, 2013 yılında dotCloud adlı bir Platform as a Service (PaaS) sağlayıcısı tarafından geliştirilmiştir ve kurucusu ve CTO’su Solomon Hykes olarak bilinmektedir.
 
 Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Bu teknoloji, farklı konteynerlar arasında görevleri bölüştürerek, daha hızlı ve verimli bir şekilde çalışan bir sistem oluşturmak için kullanılabilir. Çoklu konteynerlar, birbirleriyle iletişim halinde olan ve her biri farklı bir görevi yerine getiren bir dizi konteynerden oluşan bir yapıdır. Bu yapı, görevler arasında paralelleştirme yapılarak daha hızlı ve verimli bir sistem oluşturulabilir. Konteynerler arasındaki iletişim, Docker Swarm veya Kubernetes gibi konteyner orkestrasyon araçları kullanılarak kolayca yönetilebilir. Bu sayede, tasarım ölçeklenebilir hale getirilebilir.
