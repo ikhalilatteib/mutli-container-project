@@ -1,93 +1,77 @@
 \section{PROJE TANITIMI }
+
+Bu proje, Docker kullanarak paralel işlem yapabilen sistemler için çoklu konteynerlarla bir sistem tasarlamayı amaçlar. Proje kapsamında Docker'ın izolasyon özellikleri ve optimize edilebilirlik imkanı kullanılarak her bir konteyner farklı işlevler için optimize edilir. Laravel yapısıyla esneklik sağlanır ve güvenlik önlemleri alınır. Docker konteynerleme işlemleriyle uygulama performansı artırılır ve işler daha etkin bir şekilde gerçekleştirilir. İlerleme takibi ve bildirim sistemi eklenerek kullanıcıların işlerin durumunu kolaylıkla takip etmeleri sağlanır. Projenin detayları aşağıda detaylı şekilde açıklanmıştır.
 \subsection{Giriş}
 Projemizin amacı, Docker kullanarak paralel işlem yapabilen sistemler, uygulamalar ve servisler için çoklu konteynerlar kullanarak bir sistem tasarlamaktır. Docker, izolasyon sağlayarak her bir konteyneri farklı özellikler ve işlevler için optimize etme imkanı sunar ve bu da uygulamanın ölçeklenebilir olmasını sağlar.
-\subsection{Yapı ve Teknolojiler:}
+\subsection{Yapı ve Teknolojiler}
 Projede, Laravel yapısı kullanıldı. Bu sayede, arayüz ve backend arasında esneklik sağlayarak birlikte çalışma imkanı elde edildi. Arayüz için başlangıçta bir hazır template kullanıldı, ancak bu templateleri ihtiyaçlarımıza göre özelleştirildi ve değişiklikler yapıldı. Daha sonra backend ile entegrasyonu gerçekleştirerek ayarlamaları tamamlandı.
 \subsection{Güvenlik Önlemleri:}
 Projenin güvenliği için, login sayfası tasarlandı ve erişim kısıtlamaları eklendi. Bu sayede, giriş yapmayan kullanıcıların diğer sayfalara erişmesi engellendi. Kullanıcıların güvenliğini ve verilerin gizliliğini korumak önemli bir hedefimiz oldu.
-\subsection{Docker ile Konteynerleme:}
+\subsection{Docker ile Konteynerleme}
 Son aşamada, Docker işlemlerini gerçekleştirerek konteynerleme işlemleri tamamlandı. Docker'ın avantajlarından yararlanarak, uygulamayı farklı konteynerlar içinde çalıştırılabildi. Böylelikle, her bir konteynerin optimize edilmiş bir şekilde çalışmasını sağlayarak işleri belirtilen sayıda konteynera bölerek daha esnek bir yapı oluşturuldu. Bu da performansı artırırken sistem üzerindeki yükü dengelememize yardımcı oldu.
-\subsection{İlerleme Takibi ve Bildirim Sistemi:}
+\subsection{İlerleme Takibi ve İletişim Sistemi}
 Projenin arayüzünde, canlı olarak ilerleme bilgilerini gösteren bir özellik bulunmaktadır. Kullanıcılara, toplam iş miktarı, tamamlanma yüzdesi ve en hızlı çalışan konteynerlar gibi önemli bilgiler sunarak işlerin durumunu takip etmeleri sağlandı. Bu sayede kullanıcılar, işlerin ne kadar ilerlediğini ve hangi konteynerların en etkili olduğunu görebilmektedir.
-\subsection{Sonuç:}
-Özetlemek gerekirse, projemizde Docker kullanarak paralel işlem yapabilen bir sistem tasarlandı. Laravel yapısını kullanarak esnek bir yapı oluşturuldu. Güvenlik önlemlerini alarak kullanıcıların ve verilerin güvenliğini sağlandı. Docker ile konteynerleme işlemlerini gerçekleştirerek
-uygulamayı optimize ettik ve performansı artırdık. Arayüzde canlı ilerleme bilgilerini gösteren bir özellik ekleyerek kullanıcıların işlerin durumunu takip etmelerini kolaylaştırdık.
-
-Projenin başarıyla tamamlanması için bir dizi adım takip edildi. İlk olarak, gereksinimlerimizi belirledik ve Docker'ı seçtik çünkü konteynerleme teknolojisi olarak bize izolasyon ve esneklik sağlayan bir çözüm sunuyordu. Ardından, Laravel yapısını kullanarak arayüz ve backend arasında etkili bir iletişim ve veri akışı sağladık.
-
-Arayüz tarafında, hazır bir template kullanarak başladık, ancak bunu kendi tasarım ve işlevsel gereksinimlerimize uygun şekilde özelleştirdik. Kullanıcılarımızın deneyimini en üst düzeye çıkarmak için kullanıcı dostu ve sezgisel bir arayüz tasarladık.
-
-Backend tarafında, güvenlik önlemleri almak için login sayfasını tasarladık ve kullanıcıların kimlik doğrulama sürecini sağlamlaştırdık. Bu sayede, yalnızca yetkilendirilmiş kullanıcıların sistemimizi kullanabilmesini sağladık ve veri güvenliğini sağladık.
-
-Docker kullanarak konteynerleme işlemlerini gerçekleştirdik. Her bir konteyner, farklı özelliklere ve işlevlere sahip olduğu için optimize edilebilir hale geldi. İşleri parçalara bölerek belirli sayıda konteynera dağıttık, bu da sistemimizin esnekliğini artırdı ve işleri daha hızlı ve etkin bir şekilde gerçekleştirebildi.
-
-Projenin devamında, kullanıcıların işleri daha etkili bir şekilde yönetmelerini sağlamak için bazı ek özellikler ekledik. Örneğin, kullanıcılar işleri önceliklendirebilir ve farklı konteynerlarda çalışacak işlere öncelik atayabilir. Bu, daha hızlı tamamlanması gereken işlerin öncelikli olarak çalıştırılmasını sağladı ve genel performansı artırdı.
-
-Ayrıca, proje takımının iletişimini kolaylaştırmak için bir bildirim sistemi entegre ettik. Kullanıcılar, tamamlanan işler hakkında anlık bildirimler aldı ve gerektiğinde müdahale edebildi. Bu, ekip üyelerinin işlerin durumunu takip etmesini ve projenin ilerlemesini koordine etmesini kolaylaştırdı.
-
-Sonuç olarak, Docker kullanarak paralel işlem yapabilen bir sistem tasarladık ve bu sistemde Laravel yapısını kullanarak esneklik sağladık. Güvenlik önlemleri alarak kullanıcıların ve verilerin güvenliğini koruduk. Docker ile konteynerleme işlemlerini gerçekleştirerek optimize edilmiş bir sistem oluşturduk. Arayüzde ilerleme takibi ve bildirim sistemi gibi özellikler ekleyerek kullanıcıların işleri daha etkili bir şekilde yönetmelerini sağladık.
-
-Bu proje sayesinde, paralel işlem yapabilen sistemlerin performansını artırma, esneklik sağlama ve güvenliği sağlama konularında önemli bir deneyim kazandık.
-\section{KULLANILAN YAZILIMLAR VE YÖNTEMLER}
-\subsection{Neden Tercih Ettik ?}
+\section{KULLANILAN TEKNOLOJİLER VE YÖNTEMLER}
+\subsection{Kullanılan Bileşenlerin Tercih Sebepleri}
 \textbf{Laravel}, web uygulamaları için tercih ettiğimiz bir framework'tür. MVC yapısı ve geliştirme kolaylığı sağlar. Hazır bileşenleriyle hızlı ve verimli bir şekilde uygulama geliştirebiliriz. Geniş topluluğuyla destek alabileceğimiz bir kaynağa sahiptir. Bu nedenlerle, Laravel'i tercih ettik.\\
 \textbf{Docker'ı} tercih etmemizin nedeni, uygulamaların izole edilmiş, taşınabilir ve hızlı bir şekilde dağıtılmasını sağlayan konteyner teknolojisiyle geliştirme ve dağıtım süreçlerini kolaylaştırmasıdır.\\
 \textbf{MySQLi}, MySQL veritabanı ile PHP arasında bir bağlantı sağlayan bir PHP eklentisidir. MySQLi'nin tercih edilmesinin nedeni, gelişmiş özellikleri, performans iyileştirmeleri ve güvenlik önlemleriyle MySQL ile daha etkili ve güvenli bir şekilde etkileşim sağlamasını sağlamasıdır.
-\subsection{Web Uygulama Geliştirmek İçin \textbf{Laravel}}
+\subsection{ \textbf{Laravel'in}Sağladığı Özelliklerden Kullandıklarımız}
 Laravel, popüler bir PHP framework'üdür ve MVC (Model-View-Controller) mimarisini kullanır. Bu mimari, uygulamanın farklı katmanlarını ayırarak kodun düzenli, okunabilir ve bakımı kolay hale gelmesini sağlar. Laravel, model, view, controller ve route gibi temel bileşenlerden oluşur. Model, veri katmanını temsil ederken, view kullanıcı arayüzünü ve controller iş mantığını yönetir. Route ise istekleri doğru controller'a yönlendirir.\\
 
 Laravel'in MVC yapısı, kodun düzenli tutulmasını, bileşenlerin bağımsız olmasını ve geliştirme sürecinin daha etkili olmasını sağlar. Bu sayede uygulama daha yeniden kullanılabilir, test edilebilir ve bakımı kolay hale gelir.
-\subsubsection{Kullanım Kolaylığı:}
+\subsubsection{Kullanım Kolaylığı}
 Laravel, kullanıcı dostu ve kolay bir kullanım deneyimi sunar. Gelişmiş komut satırı araçları, hazır bileşenler ve entegre özellikler sayesinde hızlı bir şekilde uygulama geliştirebilirsiniz. Laravel'in sunduğu Artisan komut satırı aracı, geliştirme sürecini hızlandırır ve tekrarlayan görevleri otomatikleştirir. Artisan komutları, veritabanı yönetimi, migrasyonlar, testlerin çalıştırılması, güvenlik kontrolleri ve daha birçok işlemi kolaylıkla gerçekleştirmenizi sağlar.
 Ayrıca, Laravel'in içerdiği hazır bileşenler ve entegre özellikler, geliştirme sürecini daha da kolaylaştırır. Örneğin, kimlik doğrulama ve yetkilendirme sistemleri gibi önemli işlevlerin birçoğu Laravel'de hazır olarak sunulur ve uygulamanızı güvenli hale getirmek için kolayca kullanılabilir. Ayrıca, oturum yönetimi, önbellekleme, e-posta gönderme, dosya depolama ve diğer yaygın kullanılan işlevler için Laravel'in entegre özelliklerinden yararlanabilirsiniz.
-\subsubsection{MVC Mimari ve Yapılandırma: }
+\subsubsection{Laraval'de MVC Yapısı }
 Laravel'in Model-View-Controller (MVC) mimarisi, uygulamanın farklı katmanlarını ayırarak kodun düzenli tutulmasını ve bakımını kolaylaştırır. Model, view ve controller bileşenleri arasındaki net ayrım, iş mantığının yönetimini ve kullanıcı arayüzünün ayrı tutulmasını sağlar.
-\subsubsection{Etkili Veritabanı Yönetimi: }Laravel, veritabanı işlemlerini kolaylaştıran bir ORM (Object-Relational Mapping) olan Eloquent'i içerir. Eloquent, veritabanı sorgularını nesne odaklı bir şekilde yapmanızı sağlar ve veritabanı işlemlerini hızlı ve verimli bir şekilde gerçekleştirmenizi sağlar.
+\subsubsection{ORM Katmanı }Laravel, veritabanı işlemlerini kolaylaştıran bir ORM (Object-Relational Mapping) olan Eloquent'i içerir. Eloquent, veritabanı sorgularını nesne odaklı bir şekilde yapmanızı sağlar ve veritabanı işlemlerini hızlı ve verimli bir şekilde gerçekleştirmenizi sağlar.
 \subsubsection{Veritabanı Şeması:} Laravel'in sağladığı göç (migration) sistemini kullanarak, veritabanı şemasını kolayca oluşturabilir ve değişiklikleri yönetebilirsiniz. Bu, uygulamanızın veritabanı yapısını güncellemek ve yönetmek için esneklik sağlar.
-\subsubsection{Güvenlik ve Oturum Yönetimi:}
-Laravel, güvenlik önlemleriyle donatılmıştır. Oturum yönetimi, kimlik doğrulama ve yetkilendirme gibi güvenlik işlemlerini kolayca uygulamanızı sağlar.
-\subsubsection{Geniş Ekosistem ve Topluluk Desteği: }
+\subsubsection{Güvenlik ve Oturum Yönetimi}
+Laravel, güvenlik önlemleriyle donatılmıştır. Oturum yönetimi, kimlik doğrulama güvenlik işlemlerini kolayca uygulamanızı sağlar.
+\subsubsection{Geniş Ekosistem ve Topluluk Desteği }
 Laravel, büyük bir geliştirici topluluğuna sahiptir ve aktif bir ekosistemi vardır. Laravel Forge, Laravel Nova, Laravel Horizon gibi araçlar ve paketlerle işleri kolaylaştırabilir ve projenizi hızlandırabilirsiniz. Ayrıca, Laravel ile ilgili belgeler, kaynaklar ve topluluk destekleri kolayca erişilebilir.
 \subsection{Konteynerize Etmek İçin \textbf{Docker }}
-\subsubsection{Docker Nedir?}
+\subsection {Konteyner Tanımı }
+Bir konteyner, uygulama veya hizmetlerin çalıştırıldığı ve izole edildiği bir sanal ortamdır. Konteynerler, bir işletim sistemi çekirdeğini paylaşarak çalışırken, uygulama ve bileşenlerini bir arada bulundurur ve bu şekilde taşınabilirlik, hızlı dağıtım ve ölçeklenebilirlik gibi avantajlar sunar. 
+Konteynerler, birbiriyle çakışmadan çalışabilir ve kaynakları (bellek, işlemci, ağ vb.) etkin bir şekilde paylaşabilirler. Bunun yanı sıra, konteynerlerin oluşturulması, başlatılması ve durdurulması gibi işlemler hızlı ve kolaydır. 
+Konteyner teknolojisi, uygulama geliştirme, test, dağıtım ve çalıştırma süreçlerini kolaylaştırarak verimliliği artırır.
+\subsubsection{Docker Tanımı}
 
 Docker, uygulamaların ve hizmetlerin paketlenmesi, dağıtımı ve çalıştırılmasını kolaylaştıran bir yazılım platformudur. Docker, konteyner teknolojisi kullanarak uygulamaların izole edilmiş ve taşınabilir bir şekilde çalışmasını sağlar.
 
 \subsubsection{Docker'ın çalışma yapısı }
 Docker'ın çalışma yapısı şu şekildedir:
 \begin{itemize}
-\item Konteyner: Docker'ın temel yapı birimidir. Konteyner, uygulamanın tüm bağımlılıklarını (kod, çalışma zamanı, kütüphaneler, ortam değişkenleri vb.) bir araya getirir ve izole bir ortamda çalışmasını sağlar. Konteynerlar, bir uygulamayı çalıştırmak için gerekli olan tüm bileşenleri içerir ve bu sayede uygulamaları farklı ortamlarda tutarlı bir şekilde çalıştırabilirsiniz.
+\item \textbf{Konteyner:} Docker'ın temel yapı birimidir. Konteyner, uygulamanın tüm bağımlılıklarını (kod, çalışma zamanı, kütüphaneler, ortam değişkenleri vb.) bir araya getirir ve izole bir ortamda çalışmasını sağlar. Konteynerlar, bir uygulamayı çalıştırmak için gerekli olan tüm bileşenleri içerir ve bu sayede uygulamaları farklı ortamlarda tutarlı bir şekilde çalıştırabilirsiniz.
 
-\item Docker Image (Docker İmajı): Bir Docker konteynerini oluşturmak için kullanılan bir şablondur. Bir Docker imajı, bir veya daha fazla katman (layer) olarak adlandırılan yapı taşlarından oluşur. Her katman, imajın farklı bir bileşenini veya yapılandırmasını temsil eder. Bir Docker imajı, bir veya birden fazla konteyneri oluşturmak için kullanılabilir.
+\item \textbf{Docker Image (Docker İmajı):} Bir Docker konteynerini oluşturmak için kullanılan bir şablondur. Bir Docker imajı, bir veya daha fazla katman (layer) olarak adlandırılan yapı taşlarından oluşur. Her katman, imajın farklı bir bileşenini veya yapılandırmasını temsil eder. Bir Docker imajı, bir veya birden fazla konteyneri oluşturmak için kullanılabilir.
 
-\item Dockerfile (Docker Dosyası): Docker imajlarının nasıl oluşturulacağını tanımlayan bir metin dosyasıdır. Dockerfile, bir uygulamanın çalıştırılması için gerekli olan adımları ve komutları belirtir. Dockerfile, uygulama kodunu, çalışma zamanını, bağımlılıkları ve diğer yapılandırmaları imaja dahil etmek için kullanılır.
+\item  \textbf{Dockerfile (Docker Dosyası):} Docker imajlarının nasıl oluşturulacağını tanımlayan bir metin dosyasıdır. Dockerfile, bir uygulamanın çalıştırılması için gerekli olan adımları ve komutları belirtir. Dockerfile, uygulama kodunu, çalışma zamanını, bağımlılıkları ve diğer yapılandırmaları imaja dahil etmek için kullanılır.
 
-\item Docker Registry: Docker imajlarının depolandığı ve paylaşıldığı bir merkezi kaynak. Docker Hub, en popüler ve yaygın kullanılan Docker Registry'dir. Docker Hub'da, birçok hazır Docker imajı bulabilir ve kendi imajlarınızı da paylaşabilirsiniz. Ayrıca, Docker Registry'lerini yerel olarak da kurabilir ve kullanabilirsiniz.
+\item \textbf{Docker Registry:} Docker imajlarının depolandığı ve paylaşıldığı bir merkezi kaynak. Docker Hub, en popüler ve yaygın kullanılan Docker Registry'dir. Docker Hub'da, birçok hazır Docker imajı bulabilir ve kendi imajlarınızı da paylaşabilirsiniz. Ayrıca, Docker Registry'lerini yerel olarak da kurabilir ve kullanabilirsiniz.
 \end{itemize}
 
-\subsubsection{Docker'ın avantajları }
-Docker'ın avantajları şunlardır:
+\subsubsection{Konteyner tekonolojisinin   avantajları }
+Konteyner teknolojisinin birçok avantajı vardır:
 \begin{itemize}
-\item Taşınabilirlik: Docker, uygulamaların farklı platformlarda ve ortamlarda sorunsuz bir şekilde çalışmasını sağlar. Bir kez oluşturulan Docker imajı, farklı sistemlerde kolayca dağıtılabilir ve çalıştırılabilir.
+\item \textbf{İzolasyon:} Konteynerler, uygulamaları ve hizmetleri birbirlerinden izole eder. Her konteyner, kendi dosya sistemini, kütüphanelerini ve diğer bağımlılıklarını içerir. Bu izolasyon, bir konteynerdeki bir uygulamanın diğer konteynerler üzerindeki performansa veya güvenliğe olumsuz etki yapmasını önler.
 
-\item İzolasyon: Docker konteynerleri, uygulamaları ve bağımlılıklarını izole ederek, bir konteynerin diğerlerine etkileşimde bulunmasını engeller. Bu, güvenlik ve istikrar açısından önemli bir avantaj sağlar.
+\item \textbf{Taşınabilirlik:} Konteynerler, uygulamaları ve bileşenleri, kullandıkları ortamla bağımsız olarak taşınabilir hale getirir. Bir kez oluşturulan ve yapılandırılan konteynerler, farklı işletim sistemleri veya bulut platformları üzerinde kolaylıkla çalıştırılabilir. Bu, uygulamaların farklı ortamlarda sorunsuz bir şekilde dağıtılmasını ve çalıştırılmasını sağlar.
 
-\item Hızlı dağıtım ve ölçeklendirme: Docker, uygulamaların hızlı bir şekilde dağıtılmasını ve ölçeklendirilmesini sağlar. İmajların hızlı bir şekilde oluşturulması ve konteynerlerin hızlı bir şekilde başlatılması sayesinde uygulamaların hızlıca yayınlanması mümkün olur.
+\item \textbf{Hızlı Dağıtım:} Konteynerler, uygulama dağıtım sürecini hızlandırır. Konteynerlerin hızlı bir şekilde başlatılması ve durdurulması, yeni sürümlerin ve güncellemelerin kolayca dağıtılabilmesini sağlar. Bu da geliştirme sürecini hızlandırır ve hızlı geri dönüşlerin elde edilmesini sağlar.
 
-\item Verimlilik: Docker, kaynakların etkin bir şekilde kullanılmasını sağlar. Konteynerler, daha az bellek ve işlemci gücü tüketerek daha fazla uygulamanın çalışmasını sağlar.
+\item \textbf{Ölçeklenebilirlik:} Konteynerler, ölçeklenebilir bir altyapı sağlar. Birden fazla konteyneri aynı anda çalıştırabilir ve yükü dengeleyebilirsiniz. İhtiyaç duyduğunuzda konteyner sayısını artırabilir veya azaltabilirsiniz. Bu, talebe göre kaynakları esnek bir şekilde yönetmenizi sağlar ve sistem performansını artırır.
 
-\item Veri bütünlüğü: Docker, verilerin konteynerlerle birlikte taşınmasını ve yönetilmesini kolaylaştırır. Konteynerler, verileri izole bir şekilde tutar ve bu da veri bütünlüğünü sağlar.
+\item \textbf{Kaynak Verimliliği:} Konteynerler, kaynakların daha etkin kullanılmasını sağlar. Bir konteyner, yalnızca gerektiği kadar kaynağı kullanır ve diğer konteynerlerle kaynakları paylaşır. Bu, sunucu kaynaklarının daha verimli bir şekilde kullanılmasını ve daha fazla uygulamanın veya hizmetin aynı sunucu üzerinde çalışmasını sağlar.
 
-\item Hızlı geri alma ve güncelleme: Docker, imaj ve konteyner tabanlı bir yaklaşım kullanarak hızlı geri alma ve güncelleme süreçleri sağlar. Eski bir imaja geri dönerek veya güncellenmiş bir imajla yeni bir konteyner oluşturarak sistemde yapılan değişiklikleri geri almak veya güncellemek kolaydır.
+\item \textbf{Kolay Yönetim:} Konteyner teknolojisi, uygulamaların ve bileşenlerin yönetimini kolaylaştırır. Konteyner yönetim araçları, konteynerleri oluşturmayı, yapılandırmayı, izlemeyi ve yönetmeyi sağlar. Konteynerlerin otomatik olarak yeniden başlatılması, hata durumlarında kurtarma mekanizmalarının devreye alınması gibi işlemler kolayca gerçekleştirilebilir.
 
-\item Kaynak verimliliği: Docker, paylaşılan çekirdek özelliklerini kullanarak kaynakların daha verimli bir şekilde kullanılmasını sağlar. Birçok konteyner, tek bir işletim sistemi çekirdeği üzerinde çalışır ve bu da sistem kaynaklarının daha etkin bir şekilde kullanılmasını sağlar.
-
-\item Topluluk desteği: Docker, geniş bir kullanıcı ve geliştirici topluluğuna sahiptir. Bu topluluk, Docker hakkında bilgi paylaşımı, sorun giderme ve yenilikçi çözümler sunma konusunda yardımcı olur. Docker Hub gibi kaynaklar, hazır kullanıma uygun imajlar ve araçlar sağlar.
 \end{itemize}
+Konteyner teknolojisinin bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.\\
 
-Docker'ın bu avantajları, uygulama geliştirme ve dağıtım süreçlerinde hızlılık, esneklik, güvenlik ve ölçeklenebilirlik sağlar. Ayrıca, Docker'ın genişletilebilirlik ve entegrasyon yetenekleri, farklı platformlar ve araçlarla uyumlu çalışmayı kolaylaştırır.
+Konteynerlar, yazılım geliştirme ve işletim ekipleri arasındaki işbirliğini güçlendirerek DevOps prensiplerini destekler. Konteynerlar, uygulamaları paketleyip taşınabilir birimler haline getirerek hızlı geliştirme, sorunsuz çalışma ve hızlı dağıtım imkanı sunar. Bu sayede, yazılım geliştirme ekipleri uygulamaları kolayca test eder ve işletim ekipleri de hızlıca dağıtabilir. Sürekli entegrasyon ve dağıtım yöntemleri ile otomasyon sağlanır, böylece hızlı ve güvenilir bir dağıtım süreci oluşturulur. Konteynerlar sayesinde ekipler arasındaki işbirliği artar ve daha iyi hizmet kalitesi sağlanır.
 
-\subsubsection{Neden Docker ?}
 Docker, bir yazılımın uygulama ve bağımlılıklarını bir "konteyner" olarak paketlemek ve çalıştırmak için kullanılan bir platformdur. Docker'ın sanal makinelerden farklı olarak konteynerizasyon teknolojisi üzerine kurulu olması, birkaç önemli avantaj sunmaktadır:\\
 \begin{itemize}
 \item Daha hafif ve hızlı: Sanal makineler (VM'ler), her biri kendi işletim sistemini çalıştıran ayrı bir sanal makine olduğundan, daha fazla kaynak tüketir ve yavaş çalışabilir. Docker konteynerleri ise ana işletim sistemini paylaşır ve sadece uygulama ve bağımlılıkları içerir. Bu nedenle, Docker konteynerleri daha hafif ve daha hızlıdır.\\
@@ -118,66 +102,23 @@ Docker komutlarını ve açıklamalarını içeren Tablo \ref{tab:docker-komutla
   docker images & Oluşturulmuş Docker imajlarını listelemek için kullanılır. \\ \hline
   \end{tabular}
 \end{table}
-\subsubsection{Docker vs Sanal Makianlar}
-Sanal makine (VM) teknolojisi, ayrı işletim sistemleri ve bağımsız çalışma ortamları sağlar. Her bir sanal makine, kendi işletim sistemi, yazılım yığını ve kaynaklara sahip bir sanal bilgisayardır. VM'ler, fiziksel makine üzerinde çalışırken, her biri kendi kaynaklara sahip olduğundan izolasyon sağlarlar. Bu, farklı işletim sistemlerini aynı fiziksel makinede çalıştırmanın bir yolunu sunar. Ancak, VM'lerin daha fazla bellek, işlemci gücü ve depolama alanı gibi kaynaklara ihtiyaç duyması ve daha yavaş çalışması dezavantajlarından bazılarıdır.\\
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.9\textwidth]{images/virtualboxvsdocker.jpg}
-    \caption{Docker vs Sanal Makina}
-    \label{fig:resim_etiketi}
-  \end{figure}
-Docker konteynerleri, hafif ve taşınabilir uygulama çalıştırma birimleridir. Docker, aynı çekirdek üzerinde çalışan ve paylaşılan kaynakları kullanan konteynerleştirilmiş uygulamaları yönetmek için bir platform sağlar. Her bir Docker konteyneri, izole bir çalışma ortamı sunar, ancak farklı bir işletim sistemi çalıştırmak yerine, ana makinedeki işletim sistemi ve çekirdek üzerinde çalışır. Bu, daha düşük bellek kullanımı ve daha hızlı başlatma süreleri gibi avantajlar sağlar. Ayrıca, Docker konteynerleri uygulama dağıtımını kolaylaştırır ve yazılımın farklı ortamlarda tutarlı bir şekilde çalışmasını sağlar.\\
-Biz sanal makina olarak VirtualBox'ı baz alacağız.\\
-Tablo \ref{tab:docker-virtualbox} Docker ile VirtualBox arasındaki karşılaştırmayı göstermektedir.\\
-\subsubsection{Docker vs VirtualBox}
-\begin{table}[!h]
-  \centering
-  \begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
-    \hline
-    \textbf{Docker} & \textbf{VirtualBox} \\
-    \hline
-    Konteyner tabanlı sanallaştırma & Tam sanallaştırma \\
-    \hline
-    Aynı çekirdek üzerinde çalışır & Farklı işletim sistemlerini çalıştırır \\
-    \hline
-    Hafif ve taşınabilir konteynerler & Tam işletim sistemine sahip sanal makineler \\
-    \hline
-    İzole çalışma ortamı sağlar & İzole çalışma ortamı sağlar \\
-    \hline
-    Daha düşük bellek kullanımı ve hızlı başlatma & Daha fazla kaynak gerektirir \\
-    \hline
-    Uygulama dağıtımını kolaylaştırır & Farklı işletim sistemlerinin testi için kullanılır \\
-    \hline
-    Docker Hub'da konteyner görüntüleri paylaşabilir & Sanal makine görüntüleri kullanılabilir \\
-    \hline
-    Microservisler ve ölçeklenebilir uygulama geliştirmeleri & Özel izolasyon gerektiren durumlar \\
-    \hline
-  \end{tabular}
-  \caption{Docker vs. VirtualBox}
-  \label{tab:docker-virtualbox}
-\end{table}
+%eklemeler yapılacak 
+
+
+
 \subsection{Veri Tabanı İçin \textbf{MYSQL }}
-\subsubsection{MYSQL Nedir?}
-MySQLi, PHP ile MySQL veritabanına erişmek için kullanılan gelişmiş bir PHP eklentisidir. MySQLi, MySQL eklentisine göre daha fazla özellik ve performans sağlar. Bu eklenti, PHP'nin dahili fonksiyonları ve sınıfları aracılığıyla MySQL sunucusuna bağlanma, sorgu yürütme, veri ekleme, güncelleme, silme gibi veritabanı işlemlerini kolaylıkla gerçekleştirme imkanı sunar. MySQLi'nin nesne yönelimli programlama (OOP) sınıfları, parametreli sorguların kullanımı, hata yönetimi ve bağlantı kontrolü gibi gelişmiş özellikleri sayesinde veritabanı işlemleri daha güvenli, verimli ve esnek hale gelir. Bu nedenle, MySQLi, PHP projelerinde MySQL veritabanına erişmek için tercih edilen bir seçenektir.
+MySQL Veritabanı, performansı, güvenliği, ölçeklenebilirliği ve açık kaynak avantajıyla web uygulamalarının veritabanı ihtiyaçlarını etkili bir şekilde karşılayan bir çözümdür.Aşağıda detaylı şekilde anlatılmıştır.
+\subsubsection{MySQL Veritabanının Özellikleri ve Avantajları}
 
-MySQL, açık kaynaklı bir ilişkisel veritabanı yönetim sistemidir ve verileri tablolarda saklayarak ilişkileri yönetmeyi sağlar. İstemci-sunucu modeline dayanan bu çok kullanıcılı veritabanı sistemi, bir sunucu üzerinde çalışır. MySQL, hızlı, güvenilir ve geniş bir kullanıcı tabanına sahiptir. Ayrıca, geniş uyumluluk listesi sayesinde farklı programlama dilleri ve platformlarla kolayca entegre olabilir. Veritabanı yönetimi, veri manipülasyonu, sorgulama, güvenlik, yedekleme ve geri yükleme gibi birçok temel işlemi destekler. Bu nedenlerle MySQL, web uygulamalarında ve büyük ölçekli sistemlerde sıkça tercih edilen bir veritabanı çözümüdür. Yüksek performans, ölçeklenebilirlik ve kullanıcı dostu arayüz gibi önemli özelliklere sahiptir, veri tabanı yönetimi için güçlü ve esnek bir seçenektir.
-\subsubsection{Özellikler ve Avantajlar:}
-MySQL, geniş kullanıcı tabanıyla tanınan hızlı ve güvenilir bir veritabanı yönetim sistemidir. Veri manipülasyonu, sorgulama, güvenlik, yedekleme ve geri yükleme gibi temel veritabanı işlemlerini başarılı bir şekilde destekler. Ayrıca, MySQL geniş bir uyumluluk listesine sahiptir ve farklı programlama dilleri ve platformlarla kolayca entegre olabilir. Veri bütünlüğünü koruma, güvenlik, yüksek performans, ölçeklenebilirlik ve kullanıcı dostu bir arayüz gibi önemli özellikleriyle öne çıkar. Bu özellikleri sayesinde MySQL, veritabanı yönetimi için güçlü bir seçenek olarak tercih edilmektedir.
+\begin{itemize}
+\item Veritabanı Yönetimi: : MySQL, kullanıcı dostu bir arayüzle karmaşık veritabanı yapılarının yönetilmesine olanak tanır. Veritabanı oluşturulması, tabloların tanımlanması, veri eklenmesi ve sorgulama gibi işlemler kolaylıkla gerçekleştirilebilmektedir. Bu sayede kullanıcılar, veritabanı yönetimi süreçlerinde etkin bir şekilde rol alabilmektedirler.
 
-\subsubsection{Kullanım Alanları:}
+\item Veri Tutma ve İşleme: MySQL, farklı veri türlerini (sayılar, metinler, tarihler vb.) destekleyerek kullanıcılara geniş bir veri tutma ve işleme imkanı sunulur. Bu veriler üzerinde veri ekleme, güncelleme, silme, sıralama ve filtreleme gibi çeşitli işlemler kolaylıkla gerçekleştirilebilir. Bu sayede kullanıcılar, verileriyle etkileşimde bulunurken esneklik ve işlevsellik sağlanır.
+
+\item Veritabanı Güvenliği: MySQL, veritabanı güvenliğini sağlamak için kullanıcı yetkilendirme ve erişim kontrolü mekanizmalarıyla donatılmıştır. Kullanıcılar, belirli işlemleri gerçekleştirme yetkilerini belirleyebilir ve veri güvenliğini korumak için gerekli önlemleri alabilir. Ayrıca, veri şifreleme yöntemleri kullanarak verilerinizi güvende tutmanız da mümkündür
+
+\item Açık Kaynaklı: MySQL, açık kaynaklı bir veritabanıdır. Kullanıcılar, kaynak koduna erişebilir ve ihtiyaçlarına göre özelleştirme yapabilir. Geniş bir kullanıcı topluluğu, destek ve kaynak paylaşımı açısından avantaj sağlar.
+\end{itemize}
+
+\subsubsection{Kullanım Alanları}
 MySQL, geniş ölçekteki web uygulamaları ve büyük sistemlerde yaygın olarak kullanılan etkili bir veritabanı çözümüdür. Verilerin etkin bir şekilde saklanmasını ve yönetilmesini sağlayarak projelerin gereksinimlerini karşılar. Güçlü ve esnek yapısıyla veritabanı yönetimi için tercih edilen MySQL, veri tabanlarının güvenli ve verimli bir şekilde işlenmesini sağlar.
-\subsubsection{MYSQL vs PostegreSQL}
-\begin{table}[!h]
-    \centering
-    \begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|}
-      \hline
-      \textbf{MySQL} & \textbf{PostgreSQL} \\ \hline
-      Açık kaynaklı bir ilişkisel veritabanı yönetim sistemi. & Açık kaynaklı bir ilişkisel veritabanı yönetim sistemi. \\ \hline
-      Hızlı performans ve geniş bir kullanıcı tabanına sahip. & Gelişmiş özellikleri ve veri bütünlüğü konusunda güçlü destek. \\ \hline
-      Ölçeklenebilir ve büyük ölçekli sistemlerde yaygın olarak kullanılır. & Veri bütünlüğünü koruma ve güvenlik açısından güçlü bir seçenektir. \\ \hline
-      Kolayca farklı platformlar ve programlama dilleriyle entegre olabilir. & Yüksek performans ve sorgu optimizasyonu sunar. \\ \hline
-      Düşük sistem gereksinimleri ve hafif bir yapıya sahip. & Tutarlılık ve bütünlük sağlayan bir transaksiyon yönetim sistemi sunar. \\ \hline
-      \end{tabular}
-    \caption{MySQL ve PostgreSQL Karşılaştırması}
-    \label{tab:mysql-postgresql}
-\end{table}

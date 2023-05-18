@@ -1,4 +1,4 @@
-\section{Docker ile Çoklu Konteynerlar Kullanarak Paralel İş Yapan Sistem Tasarımını Seçme Nedenlerimiz}
+\section{Proje Konusunun Seçilme Nedenleri}
 Günümüzde teknolojik projelerin karmaşıklığı ve iş yükünün artmasıyla birlikte, verimli ve ölçeklenebilir bir altyapı tasarımı büyük önem taşımaktadır.
  Bu noktada, Docker ile çoklu konteynerlar kullanarak paralel iş yapan sistem tasarımı, proje için ideal bir çözüm olarak karşımıza çıkmıştır.
   Bu yazıda, neden Docker ve çoklu konteynerlar üzerine bir sistem tasarımı seçtiğimiz açıklandı.\\
@@ -36,22 +36,9 @@ Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmaya sağladığı a
 Docker ayrıca, ölçeklendirme kolaylığı sağlar. Yüksek talep veya büyüyen iş yükleri durumunda, Docker Swarm veya Kubernetes gibi konteyner orkestrasyon araçları kullanarak yeni konteyner örnekleri oluşturabilir ve bu konteynerleri mevcut konteyner gruplarına ekleyebilirsiniz. Bu, daha fazla kaynak sağlayarak sistemi ölçeklendirmenize ve iş yükünü dengelemenize yardımcı olur. Aynı şekilde, talep düştüğünde veya iş yükü azaldığında, gereksiz konteyner örneklerini kolayca kaldırabilirsiniz. Bu dinamik ölçeklendirme yeteneği, kaynak kullanımını optimize ederek performansı artırır ve maliyetleri düşürür.
 
 Docker ayrıca, geliştirme sürecini kolaylaştırır ve hızlandırır. Konteyner tabanlı bir geliştirme ortamında, her bir bileşen veya hizmeti ayrı bir konteynerde çalıştırarak, geliştiricilerin uygulama ve hizmetlerin birlikte çalışmasını ve entegrasyonunu daha iyi test etmelerini sağlar. Ayrıca, her bir konteyneri bağımsız olarak güncelleyebilir veya değiştirebilirsiniz, bu da hızlı ve sorunsuz bir şekilde yeni özellikler eklemenize veya hataları düzeltmenize olanak tanır.
-
-Sonuç olarak, Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmaya yönelik sunmuş olduğu çözüm, performansı artırır, ölçeklenebilirlik sağlar, geliştirme sürecini hızlandırır ve sistem yönetimini kolaylaştırır. 
-Docker, paralel işlem  ihtiyaç iyaç duyan projeler için ideal bir çözümdür. Özellikle büyük ölçekli uygulamalar, mikro hizmet mimarileri veya veri yoğun iş yükleriyle çalışan sistemler Docker'ın sağladığı çoklu konteynerlar ile paralel işlem yapma yeteneklerinden büyük ölçüde faydalanabilir.
-
-Docker'ın çoklu konteynerlar kullanarak paralel işlem yapmanın yanı sıra birçok avantajı vardır. Bunlardan biri, uygulama ve hizmetlerin bağımsız ve izole bir şekilde çalıştırılabilmesidir. Her bir konteyner, kendi ortamını ve bağımsız olarak çalışan bileşenlerini içerir. Bu, uygulama ve hizmetlerin birbirinden etkilenmeden güvenli bir şekilde çalışmasını sağlar.
-
-Ayrıca, Docker'ın konteyner tabanlı mimarisi, uygulama ve hizmetlerin farklı ortamlarda sorunsuz bir şekilde çalışmasını sağlar. Bir konteyneri bir sistemden diğerine taşımak veya farklı bir ortamda çalıştırmak oldukça kolaydır. Bu da geliştirme sürecini hızlandırır ve dağıtım süreçlerini kolaylaştırır.
-
-Docker ayrıca, kaynakların etkin bir şekilde kullanılmasını sağlar. Her bir konteyner, sadece ihtiyaç duyduğu kaynakları kullanır ve izole edilmiş olduğu için diğer konteynerlere etki etmez. Bu sayede, sistemdeki kaynakların verimli bir şekilde dağıtılması ve kullanılması sağlanır.
-
-Son olarak, Docker ekosistemi geniş bir topluluk tarafından desteklenmektedir. Docker Hub gibi bir merkezi depo, hazır konteyner görüntülerini paylaşmanıza ve kullanmanıza olanak tanır. Ayrıca, Docker, zengin bir API ve komut satırı arayüzü ile birlikte gelir, bu da otomasyon ve yönetim süreçlerini kolaylaştırır.
-
-Docker'ın çoklu konteynerlar kullanarak paralel işlem yapma yetenekleri, modern bilgisayar sistemlerinde performansı artırmak ve verimliliği sağlamak için güçlü bir araçtır. Karmaşık iş yüklerini parçalara ayırarak, her bir parçayı ayrı bir konteynerde çalıştırarak ve konteynerler arasında iletişimi kolayca yöneterek, daha hızlı, ölçeklenebilir ve etkili bir sistem oluşturmak mümkündür. Bu nedenle, Docker, paralel işlem yapmak isteyen geliştiriciler ve sistem yöneticileri için önemli bir teknoloji ve çözüm sunmaktadır.
 \section{Literatür Taraması}
 Docker, konteynerleştirme teknolojisi olarak bilinen bir platformdur ve yazılım uygulamalarının hızlı bir şekilde paketlenmesi, taşınması ve dağıtılmasını sağlar. Docker, uygulamaları bağımsız ve taşınabilir bir şekilde çalıştıran hafif konteynerler oluşturmak için bir dizi araç ve API'ler sunar. Bu literatür taraması, Docker'ın kullanımıyla ilgili güncel çalışmaları incelemektedir.\\
-\subsection{Docker ve Mikro Hizmetler:}
+\subsection{Konteyner ve Mikro Hizmetler}
 \begin{itemize}
 \item  \textbf{"Microservices Deployment with Docker: Challenges and Solutions" (Docker ile Mikro Hizmetler Dağıtımı: Zorluklar ve Çözümler):}
 Bu çalışma, Docker kullanarak mikro hizmetlerin dağıtımıyla ilgili karşılaşılan zorlukları ve bu zorluklara yönelik çözümleri inceler. Mikro hizmet mimarisinde, bir uygulama birden fazla küçük hizmete (mikro hizmetlere) bölünür ve her bir hizmet kendi konteynerinde çalışır. Docker, mikro hizmetlerin bağımsız olarak paketlenmesini ve dağıtılmasını sağlayan bir konteynerleştirme teknolojisi olduğu için bu alanda yaygın olarak kullanılır. Bu çalışma, mikro hizmetlerin Docker konteynerleri içinde nasıl dağıtıldığına odaklanarak, ortaya çıkan zorlukları ve bu zorluklara yönelik çeşitli çözüm önerilerini sunmaktadır.\\
@@ -62,7 +49,7 @@ Bu çalışma, Docker kullanarak mikro hizmetlerin dağıtımıyla ilgili karş�
 \item \textbf{"Docker-based Microservice Architecture for Scalable and Fault-Tolerant Systems" (Ölçeklenebilir ve Hata Toleranslı Sistemler İçin Docker Tabanlı Mikro Hizmet Mimarisi):}
 Bu çalışma, ölçeklenebilir ve hata toleranslı sistemler için Docker tabanlı bir mikro hizmet mimarisini araştırır. Mikro hizmetlerin Docker konteynerleri içinde çalıştırılması, sistemlerin daha iyi ölçeklenebilirlik ve hata toleransı elde etmesini sağlar. Bu çalışmada, Docker'ın sağladığı avantajlar ve bu mimarinin nasıl tasarlandığı, uygulandığı ve yönetildiği üzerinde durulur. Ayrıca, ölçeklendirme, yük dengeleme ve hata toleransı gibi konulara odaklanılarak, Docker tabanlı mikro hizmet mimarisinin performans ve dayanıklılık açısından nasıl optimize edilebileceği incelenir.\\
 \end{itemize}
-\subsection{Docker ve Bulut Bilişim:}
+\subsection{Konteyner ve Bulut Bilişim}
 \begin{itemize}
  \item \textbf{"Docker Containers in Cloud Computing Environments: A Survey" (Bulut Bilişim Ortamlarında Docker Konteynerleri: Bir Araştırma):}
  Bu çalışma, bulut bilişim ortamlarında Docker konteynerlerinin kullanımını araştırmaktadır. Docker konteynerleri, bulut bilişim altyapısında önemli bir rol oynamaktadır çünkü uygulamaların hızlı bir şekilde dağıtılmasını, ölçeklendirilmesini ve yönetilmesini sağlar. Bu çalışmada, Docker konteynerlerinin bulut bilişim ortamlarındaki yaygın kullanımı ve avantajları incelenir. Ayrıca, Docker konteynerlerinin bulut bilişim ortamlarında karşılaşılan zorluklar, performans etkisi, ağ iletişimi ve veri yönetimi gibi konulara da değinilir.\\
@@ -71,7 +58,7 @@ Bu çalışma, ölçeklenebilir ve hata toleranslı sistemler için Docker taban
 \item \textbf {"Security Considerations for Docker Deployments in Cloud Infrastructure" (Bulut Altyapısında Docker Dağıtımları İçin Güvenlik Düşünceleri):}
  Bu çalışma, bulut altyapısında Docker dağıtımları için güvenlik düşüncelerini ele almaktadır. Docker konteynerlerinin bulut altyapısında kullanılması, güvenlik açısından dikkate alınması gereken bazı zorlukları beraberinde getirebilir. Bu çalışmada, Docker konteynerlerinin güvenlik riskleri, izolasyon önlemleri, veri güvenliği ve ağ güvenliği gibi konular incelenir. Ayrıca, Docker'da güvenlik en iyi uygulamaları ve bu uygulamaların bulut altyapısında nasıl uygulanabileceği tartışılır.
 \end{itemize}
-\subsection{Docker ve Güvenlik:}
+\subsection{Konteyner ve Güvenlik}
 \begin{itemize}
 \item \textbf{ "Container Security: Vulnerabilities, Threats, and Docker Best Practices" (Konteyner Güvenliği: Zafiyetler, Tehditler ve Docker En İyi Uygulamaları):}
 Bu çalışma, konteyner güvenliği konusunda zafiyetleri, tehditleri ve Docker için en iyi uygulamaları araştırmaktadır. Docker konteynerleri, paylaşılan bir işletim sistemi çekirdeği üzerinde çalıştığından, kötü niyetli kullanıcıların bir konteynerden diğerine erişmesi veya güvenlik açıklarından yararlanması potansiyeli vardır. Bu çalışmada, Docker konteynerlerinin karşılaşabileceği güvenlik zafiyetleri ve tehditler incelenir. Ayrıca, Docker için en iyi uygulamalar, konteyner güvenliğini artırmak için alınması gereken önlemleri ve konteynerlerin güvenliğini sağlamak için kullanılabilecek teknolojileri içerir.\\
