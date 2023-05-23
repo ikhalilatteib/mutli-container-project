@@ -112,7 +112,6 @@ identifierstyle=\color{red},
 \renewcommand{\cftfigfont}{Şekil\;}
 \renewcommand{\cfttabfont}{Tablo\;}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage{cite}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{datetime}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,3 +144,6 @@ identifierstyle=\color{red},
 \RequirePackage[pdftex, unicode, linktoc=all, hidelinks, breaklinks]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \urlstyle{same}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{csquotes}
+\RequirePackage{biblatex}
