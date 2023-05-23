@@ -6,10 +6,10 @@ Kullanıcı arayüzü, özel bir template seçilerek projenin gereksinimlerine u
 
 \textbf{Oturum Açma} : Kullanıcıların uygulamayı kullanabilmek için oturum açmalarını sağlar. Kullanıcı, kayıtlı e-posta adresi ve şifresini girerek oturum açma işlemini gerçekleştirir.
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/login.jpeg}
-  \caption{Giriş Sayfası}
-  \label{fig:login}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/login.jpeg}
+	\caption{Giriş Sayfası}
+	\label{fig:login}
 \end{figure}
 
 Şekil \ref{fig:login}'de görüldüğü gibi oturum açma sayfası, kullanıcıya e-posta ve şifre alanlarını doldurarak oturum açma imkanı sunar. Kullanıcının girdiği e-posta adresi ve şifre, kayıtlı bilgilerle doğrulandıktan sonra oturum açma işlemi tamamlanır.
@@ -17,10 +17,10 @@ Kullanıcı arayüzü, özel bir template seçilerek projenin gereksinimlerine u
 Kullanıcı oturumu başarıyla açtığında, \textbf{Kontrol Paneli} sayfasıyla karşılaşacaktır. Şekil \ref{fig:dashboard}'de görüldüğü gibi, bu sayfa kullanıcıya genel bir bakış sağlar ve Ping ve Theharvester konteynerlerine ilişkin istatistikleri grafik ve tablo şeklinde sunar.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/dashboard.jpeg}
-  \caption{Kontrol Paneli Sayfası}
-  \label{fig:dashboard}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/dashboard.jpeg}
+	\caption{Kontrol Paneli Sayfası}
+	\label{fig:dashboard}
 \end{figure}
 
 Kontrol Paneli sayfasında kullanıcı, Ping ve Theharvester konteynerlerine ait verileri kolayca görüntüleyebilir. İlk olarak, kullanıcının sahip olduğu konteynerlerin sayısı bir grafikle gösterilir. Bu grafik, belirli bir zaman diliminde kullanıcının konteynerlerinin değişimini görsel olarak sunar.
@@ -34,19 +34,19 @@ Kontrol Paneli sayfası, kullanıcıların konteynerlerine ilişkin genel bir ba
 Panelden yeni görevler oluşturmak için \textbf{Ping Oluşturma Sayfası} kullanılır. Şekil \ref{fig:create}'de gösterilen form, kullanıcının Ping görevlerini oluşturmasını sağlar.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/create.jpeg}
-  \caption{Ping Oluşturma Sayfası}
-  \label{fig:create}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/create.jpeg}
+	\caption{Ping Oluşturma Sayfası}
+	\label{fig:create}
 \end{figure}
 
 Formda, kullanıcıdan aşağıdaki bilgileri girmesi istenir:
 \begin{itemize}
-  \item Görev Başlığı: Oluşturulacak görevin başlığı.
-  \item Açıklama: Görevle ilgili detaylı açıklama.
-  \item Ping IP Adresi: Ping işleminin gerçekleştirileceği hedef IP adresi.
-  \item Ping Sayısı: Kaç adet ping atılacağı.
-  \item Konteyner Sayısı: Bu görevi gerçekleştirecek konteynerlerin sayısı.
+	\item Görev Başlığı: Oluşturulacak görevin başlığı.
+	\item Açıklama: Görevle ilgili detaylı açıklama.
+	\item Ping IP Adresi: Ping işleminin gerçekleştirileceği hedef IP adresi.
+	\item Ping Sayısı: Kaç adet ping atılacağı.
+	\item Konteyner Sayısı: Bu görevi gerçekleştirecek konteynerlerin sayısı.
 \end{itemize}
 
 Bu bilgilerin tamamı zorunlu alanlardır ve kullanıcı tarafından doldurulması gerekmektedir. Kullanıcılar, bu formu doldurarak yeni Ping görevleri oluşturabilir ve bu görevlerin konteynerler tarafından gerçekleştirilmesini sağlayabilir.
@@ -56,60 +56,60 @@ Ping Oluşturma Sayfası, kullanıcılara kolay ve kullanıcı dostu bir şekild
 Oluşturulan Ping görevleri, \textbf{Ping Görev Listesi} adı verilen bir tablo şeklinde görüntülenir. Şekil\ref{fig:ping_list}'de gösterilen tabloda, her görevin aşağıdaki bilgileri listelenir:
 
 \begin{itemize}
-  \item Görev Başlığı: Oluşturulan görevin başlığı.
-  \item konteyner: Oluşturulan konteyner sayısı.
-  \item Oluşturan: Görevin kimin tarafından oluşturuldu
-  \item Durumu: Görevin mevcut durumu, başlangıçta "Beklemede" olarak gösterilir.
-  \item Görev Oluşturma Tarihi
-  \item Detay Botunu: Görev detayı görüntülebilmektir
+	\item Görev Başlığı: Oluşturulan görevin başlığı.
+	\item konteyner: Oluşturulan konteyner sayısı.
+	\item Oluşturan: Görevin kimin tarafından oluşturuldu
+	\item Durumu: Görevin mevcut durumu, başlangıçta "Beklemede" olarak gösterilir.
+	\item Görev Oluşturma Tarihi
+	\item Detay Botunu: Görev detayı görüntülebilmektir
 \end{itemize}
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/ping_list.jpeg}
-  \caption{Ping Görev Listesi}
-  \label{fig:ping_list}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/ping_list.jpeg}
+	\caption{Ping Görev Listesi}
+	\label{fig:ping_list}
 \end{figure}
 
 Görevlerin işlem durumu tamamlandığında, kullanıcılar detaylarına erişebilir. Görev detayı aşağıdaki bölümlerden oluşur:
 \begin{itemize}
-  \item Konteyner Grafikleri: Görevin çalıştırıldığı konteyner sayısına göre grafikler oluşturulur. Her grafikte, minimum, ortalama, maksimum ping değerleri ve ping kaybı gösterilir. Şekil\ref{fig:container_graphic}'de bu grafiklerin bir örneği görülebilir.
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/ping_graphic.jpeg}
-    \caption{konteyner Grafikleri}
-    \label{fig:container_graphic}
-  \end{figure}
-  
-  \item Görev Detayı: Görevin genel detayları, başlığı, açıklaması, atılan ping IP adresi, ping sayısı ve kullanılan konteyner sayısı gibi bilgiler içerir. Şekil\ref{fig:ping_detail}'de bu detayların bir örneği görülebilir.
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/ping_detail.jpeg}
-    \caption{Ping Görev Detayi}
-    \label{fig:ping_detail}
-  \end{figure}
-  
-  \item Konteyner Detayları ve Çıktıları: Görevin çalıştırıldığı konteynerlerin ayrıntıları ve çıktıları bu bölümde görüntülenir. Konteynerlerin detaylarını içeren bir tablo ve her konteynerin çıktılarını gösteren ayrı bir tablo bulunur. \ref{fig:container_detail} ve \ref{fig:container_output} bu detayların örneklerini gösterir.
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/container_detail.jpeg}
-    \caption{Konteyner Detayi}
-    \label{fig:container_detail}
-  \end{figure}
+	\item Konteyner Grafikleri: Görevin çalıştırıldığı konteyner sayısına göre grafikler oluşturulur. Her grafikte, minimum, ortalama, maksimum ping değerleri ve ping kaybı gösterilir. Şekil\ref{fig:container_graphic}'de bu grafiklerin bir örneği görülebilir.
+	      \begin{figure}[ht]
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{images/ping_graphic.jpeg}
+		      \caption{konteyner Grafikleri}
+		      \label{fig:container_graphic}
+	      \end{figure}
 
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/container_output.jpeg}
-    \caption{Konteyner Çıktısı}
-    \label{fig:container_output}
-  \end{figure}
-  \item Görev sırasında oluşan hatalar bu tabloda listelenir. Her hata, hata mesajı ve hatanın oluştuğu konteyner bilgileriyle birlikte gösterilir. Şekil \ref{fig:container_error}'de bu hata listesinin bir örneği görülebilir.
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/container_error.jpeg}
-    \caption{Konteyner hataları}
-    \label{fig:container_error}
-  \end{figure}
+	\item Görev Detayı: Görevin genel detayları, başlığı, açıklaması, atılan ping IP adresi, ping sayısı ve kullanılan konteyner sayısı gibi bilgiler içerir. Şekil\ref{fig:ping_detail}'de bu detayların bir örneği görülebilir.
+	      \begin{figure}[ht]
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{images/ping_detail.jpeg}
+		      \caption{Ping Görev Detayi}
+		      \label{fig:ping_detail}
+	      \end{figure}
+
+	\item Konteyner Detayları ve Çıktıları: Görevin çalıştırıldığı konteynerlerin ayrıntıları ve çıktıları bu bölümde görüntülenir. Konteynerlerin detaylarını içeren bir tablo ve her konteynerin çıktılarını gösteren ayrı bir tablo bulunur. \ref{fig:container_detail} ve \ref{fig:container_output} bu detayların örneklerini gösterir.
+	      \begin{figure}[ht]
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{images/container_detail.jpeg}
+		      \caption{Konteyner Detayi}
+		      \label{fig:container_detail}
+	      \end{figure}
+
+	      \begin{figure}[ht]
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{images/container_output.jpeg}
+		      \caption{Konteyner Çıktısı}
+		      \label{fig:container_output}
+	      \end{figure}
+	\item Görev sırasında oluşan hatalar bu tabloda listelenir. Her hata, hata mesajı ve hatanın oluştuğu konteyner bilgileriyle birlikte gösterilir. Şekil \ref{fig:container_error}'de bu hata listesinin bir örneği görülebilir.
+	      \begin{figure}[ht]
+		      \centering
+		      \includegraphics[width=0.7\linewidth]{images/container_error.jpeg}
+		      \caption{Konteyner hataları}
+		      \label{fig:container_error}
+	      \end{figure}
 \end{itemize}
 
 Bu görev detayları, kullanıcılara görevlerin ayrıntılı bilgilerini, konteyner performansını, çıktıları ve oluşan hataları inceleme imkanı sunar. Kullanıcılar, bu detaylar sayesinde görevlerin çalışma durumunu, konteynerlerin performansını ve olası sorunları kolayca analiz edebilirler.
@@ -118,115 +118,195 @@ Bu görev detayları, kullanıcılara görevlerin ayrıntılı bilgilerini, kont
 
 Her kullanıcı için aşağıdaki bilgiler listelenir:
 \begin{itemize}
-  \item Kullanıcı Adı ve Soyadı.
-  \item E-posta: Kullanıcının kayıtlı e-posta adresi.
-  \item Oluşturma Tarihi: Kullanıcının oluşturulma tarihi.
-  \item İşlem sütünüde mevcuttur.
+	\item Kullanıcı Adı ve Soyadı.
+	\item E-posta: Kullanıcının kayıtlı e-posta adresi.
+	\item Oluşturma Tarihi: Kullanıcının oluşturulma tarihi.
+	\item İşlem sütünüde mevcuttur.
 \end{itemize}
 
 Bu tablo, sisteme kayıtlı olan tüm kullanıcıların genel bilgilerini görüntüler. Kullanıcılar, bu tablo üzerinden kullanıcıları inceleyebilir, güncelleyebilir veya silme işlemleri gerçekleştirebilir. Bu sayede sistem yöneticileri, kullanıcılarla ilgili işlemleri kolaylıkla yapabilir ve kullanıcı verilerini yönetebilir.
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/users.jpeg}
-  \caption{Kullanıcılar listesi}
-  \label{fig:users}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/users.jpeg}
+	\caption{Kullanıcılar listesi}
+	\label{fig:users}
 \end{figure}
 
 \textbf{Kullanıcı Logları} bölümünde, her kullanıcının yaptığı aktivitelerin bir log listesi olarak görüntülendiği bir tablo bulunmaktadır. Şekil \ref{fig:log}'de, Kullanıcı Logları tablosu örneği gösterilmektedir.
 Bu tabloda her log girdisi için aşağıdaki bilgiler listelenir:
 \begin{itemize}
-  \item Kullanıcı: İlgili kullanıcının adı ve Soyadı.
-  \item IP: Kullanıcının oturum açtığı IP adresi.
-  \item İşlem: Kullanıcının gerçekleştirdiği işlem veya aktivite açıklaması.
-  \item Tarih: İşlemin gerçekleştiği tarih.
-  \item Saat: İşlemin gerçekleştiği saat.
+	\item Kullanıcı: İlgili kullanıcının adı ve Soyadı.
+	\item IP: Kullanıcının oturum açtığı IP adresi.
+	\item İşlem: Kullanıcının gerçekleştirdiği işlem veya aktivite açıklaması.
+	\item Tarih: İşlemin gerçekleştiği tarih.
+	\item Saat: İşlemin gerçekleştiği saat.
 \end{itemize}
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/log.jpeg}
-  \caption{Kullanıcı Logları}
-  \label{fig:log}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/log.jpeg}
+	\caption{Kullanıcı Logları}
+	\label{fig:log}
 \end{figure}
 
 Bu loglar, kullanıcı aktivitelerinin izlenmesi, takibi ve güvenlik amaçlı olarak kullanılabilir. Sistem yöneticileri veya yetkilileri, bu logları kullanarak kullanıcıların yaptığı işlemleri inceleyebilir ve gerekirse uygun önlemleri alabilir. Ayrıca, kullanıcı logları, sistemdeki kullanıcı etkinliği hakkında bilgi sahibi olmak için kullanılabilir.
 \textbf{Hesabım} bölümünde, oturum açmış olan kullanıcının kendi hesap bilgilerini güncelleyebileceği bir form bulunmaktadır. Şekil \ref{fig:account}'de, "Kullanıcı Hesabım" formu örneği gösterilmektedir.
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/account.jpeg}
-  \caption{Kullanıcı Hesabımi}
-  \label{fig:account}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/account.jpeg}
+	\caption{Kullanıcı Hesabımi}
+	\label{fig:account}
 \end{figure}
 
 Ayrıca, kullanıcının kendi logları da tablo şeklinde görüntülenmektedir. Bu loglar, kullanıcının kendi aktivitelerini takip etmek ve geçmiş işlemlerini gözden geçirmek için kullanılabilir.
 
-\subsection{Arakaplanda Çalışan Servisler (Backend)}
-Bu çalışmada asıl amacı konteynerler kullanarak toplu iş yaptırmaktadır. Konteyner ne olduğunu aşağıdaki kismi anlatılmıştır.
+\subsection{Arkaplanda Çalışan Servisler (Backend)}
 
-subsubsection{Konteyner ile ilgili Temel bilgiler}
-\subsection{Giriş}
-Projemizin amacı, Docker kullanarak paralel işlem yapabilen sistemler, uygulamalar ve servisler için çoklu konteynerlar kullanarak bir sistem tasarlamaktır. Docker, izolasyon sağlayarak her bir konteyneri farklı özellikler ve işlevler için optimize etme imkanı sunar ve bu da uygulamanın ölçeklenebilir olmasını sağlar.
-\subsection{Yapı ve Teknolojiler}
-Projede, Laravel yapısı kullanıldı. Bu sayede, arayüz ve backend arasında esneklik sağlayarak birlikte çalışma imkanı elde edildi. Arayüz için başlangıçta bir hazır template kullanıldı, ancak bu templateleri ihtiyaçlarımıza göre özelleştirildi ve değişiklikler yapıldı. Daha sonra backend ile entegrasyonu gerçekleştirerek ayarlamaları tamamlandı.
-\subsection{Güvenlik Önlemleri:}
-Projenin güvenliği için, login sayfası tasarlandı ve erişim kısıtlamaları eklendi. Bu sayede, giriş yapmayan kullanıcıların diğer sayfalara erişmesi engellendi. Kullanıcıların güvenliğini ve verilerin gizliliğini korumak önemli bir hedefimiz oldu.
-\subsection{Docker ile Konteynerleme}
-Son aşamada, Docker işlemlerini gerçekleştirerek konteynerleme işlemleri tamamlandı. Docker'ın avantajlarından yararlanarak, uygulamayı farklı konteynerlar içinde çalıştırılabildi. Böylelikle, her bir konteynerin optimize edilmiş bir şekilde çalışmasını sağlayarak işleri belirtilen sayıda konteynera bölerek daha esnek bir yapı oluşturuldu. Bu da performansı artırırken sistem üzerindeki yükü dengelememize yardımcı oldu.
-\subsection{İlerleme Takibi ve İletişim Sistemi}
-Projenin arayüzünde, canlı olarak ilerleme bilgilerini gösteren bir özellik bulunmaktadır. Kullanıcılara, toplam iş miktarı, tamamlanma yüzdesi ve en hızlı çalışan konteynerlar gibi önemli bilgiler sunarak işlerin durumunu takip etmeleri sağlandı. Bu sayede kullanıcılar, işlerin ne kadar ilerlediğini ve hangi konteynerların en etkili olduğunu görebilmektedir.
+Daha önce \ref{subsec:docker} bölümünde bahsettiğimiz gibi, Docker Engine PHP özelliğini kullanarak Laravel uygulamasıyla iletişim sağlayan "PingService" adında bir servis geliştirilmiştir. Bu servis sayesinde konteyner oluşturma, çalıştırma, detaylarını görüntüleme gibi işlemler gerçekleştirilebilir.
+
+Konteyner oluşturmak için Docker Engine API'sini kullanarak POST metoduyla \textbf{https://example.com/v14/containers/create}  adresine bir istek atılması gerekmektedir. İstek gövdesi (body) iki parametre içermektedir:
+\begin{itemize}
+	\item Image: Hangi imajın kullanılacağı
+	\item Cmd: Hangi komutun çalıştırılacağı
+\end{itemize}
+
+Bu parametreler, JSON formatında gönderilmektedir.
+
+Aşağıda, bir ping görevi oluşturma örneği verilmiştir:
+
+\begin{lstlisting}[language=PHP]
+  $response = $this->client->post('/containers/create', [
+  'json' => [
+  'Image' => 'alpine',
+  'Cmd' => ['ping', '-c', $this->ping->max_ping, $this->ping->ip]
+  ]
+  ]);
+  \end{lstlisting}
+
+Bu örnek, \textbf{alpine} imajını kullanarak \textbf{ping} komutunu belirtilen parametrelerle çalıştırmak için bir konteyner oluşturur.
+
+\say{ Alpine, hafif ve güvenli bir Linux dağıtımıdır. Docker tarafından resmi olarak desteklenen ve sıkça kullanılan bir imajdır. Alpine, minimal bir yapıya sahiptir ve gereksiz bileşenleri içermez, bu nedenle küçük boyutlu ve hızlı çalışan konteynerler oluşturmak için tercih edilir.}
+
+İşte belirli bir işlem için oluşturulan konteynerin geri döndürdüğü JSON yanıtını kullanarak konteyner kimliğini ve uyarıları elde etmek için PHP kodu:
+
+\begin{lstlisting}[language=PHP]
+	$responseJson = '{
+	  "Id": "a468317ac3533ff0dde4857bb7e50c51953293073e9ae5975e7cb5a114b8463a",
+	  "Warnings": []
+	}';
+	
+	$responseArray = json_decode($responseJson, true);
+	$containerId = $responseArray['Id'];
+	$warnings = $responseArray['Warnings'];
+\end{lstlisting}
+
+Bu kod, JSON yanıtını doğru bir şekilde bir PHP dizisine dönüştürür. Ardından, konteyner kimliğini (\texttt{\$containerId}) ve uyarıları (\texttt{\$warnings}) ilgili değişkenlere atar.
+
+Daha sonra, elde edilen konteyner kimliğiyle yapılacak işlemleri gerçekleştirebilirsiniz. Örneğin:
+
+\begin{lstlisting}[language=PHP]
+	
+	$this->startContainer($containerId);
+	
+	$this->stopContainer($containerId);
+	
+	$this->getContainerLogs($containerId);
+	
+	$this->storeContainerLogs($parsedLogs, $containerId, $operation_time);
+\end{lstlisting}
+
+Bu kod parçacığı, belirli bir işlemi gerçekleştirmek için konteyner kimliğini kullanılması olanak sağlar. İlgili işlemler \texttt{startContainer}, \texttt{stopContainer}, \texttt{getContainerLogs} ve \texttt{storeContainerLogs} olarak adlandırılan fonksiyonlar özel olarak yazılmıştır.
+
+Aşağıda, Docker Engine API ile Laravel'in nasıl bağlandığını gösteren PHP kodu yer almaktadır. Bu kod, guzzle kütüphanesini kullanarak Docker Engine API'ye bağlantı sağlamaktadır. `Ping` sınıfı bağımlılığı da burada enjekte edilmektedir.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/code_construct.png}
+	\caption{Docker Engine API ile Laravel Bağlantısı}
+	\label{fig:ping_construct}
+\end{figure}
+
+Şekil \ref{fig:ping_construct}'deki kodda, Docker Engine API'ye bağlantı sağlamak için `Client` sınıfı oluşturulmaktadır. `base uri` parametresi, Docker API endpointini belirtmektedir ve `timeout` parametresi, API çağrılarının zaman aşımı süresini belirlemektedir. Oluşturulan `Client` nesnesi, sınıfın diğer metotlarında kullanılmak üzere `this->client` değişkenine atanmaktadır.
+
+Hata durumunda, `try-catch` bloğu kullanılarak hata yakalanmakta ve ilgili işlemler gerçekleştirilmektedir. Hata durumunda, hata kaydedilip gerekli loglama işlemleri yapılmaktadır.
+
+Şekil \ref{fig:ping_func}'deki kodda, createPingContainer fonksiyonunu içerir. İlk olarak, IP adresinin doğruluğu kontrol edilir ve geçerli değilse bir hata fırlatılır. Daha sonra, mevcut konteynerleri siler.
+
+Döngü kullanarak, belirli sayıda ping konteyneri oluşturulur. Her konteyner oluşturulduğunda, Docker API'ye bir POST isteği gönderilir ve konteyner oluşturulur. Oluşturulan konteyner başlatılır ve belirli bir süre (burada 10 saniye) beklenir. Ardından konteyner durdurulur.
+
+Konteynerin çalışma süresi ve kayıtları elde edilir ve ilgili işlemler gerçekleştirilir. Son olarak, ping nesnesinin durum güncellemesi yapılır ve ilgili loglama işlemleri gerçekleştirilir.
+
+Hata durumunda, hata yakalanır, gerekli işlemler gerçekleştirilir ve hata mesajı loglanır.
+
+Bu şekilde, createPingContainer fonksiyonu, ping görevi için gerekli konteynerleri oluşturur ve ilgili işlemleri gerçekleştirir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/code_ping.png}
+	\caption{Ping Görevi için Fonksiyonlar}
+	\label{fig:ping_func}
+\end{figure}
+
+Konteynerden komut çıktısı alma işlemi aşağıdaki gibi gerçekleştirilmektedir:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/code_log.png}
+	\caption{Konteyner Komut Çıktısı Alma İşlemi}
+	\label{fig:container_cmd_output}
+\end{figure}
+
+Konteyner çıktısının parse edilme işlemi aşağıdaki gibi yapılmaktadır:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/code_parse.png}
+	\caption{Konteyner Çıktısı Parse İşlemi}
+	\label{fig:container_parse}
+\end{figure}
+
+Bu şekilde, Docker Engine API ile Laravel arasında bağlantı sağlanmakta ve ping görevi için ilgili fonksiyonlar kullanılmaktadır.
+
+Bir Ping görevi işlem akış diyagramı Şekil çizilmiştir.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{images/ping_task_diagram.png}
+	\caption{Ping Görevi Çalışma Diyagramı}
+	\label{fig:ping_task_diagram}
+\end{figure}
 
 
-\section{PROJE'NİN İŞLEYİŞİ}
-\subsection{Arayüz Kısmı }
-\subsubsection{Template Hazırlığı}
-Proje için uygun bir template seçilmiş ve projenin gereksinimlerine uygun hale getirilmiştir. Template içerisinde yer alan gereksiz kısımlar temizlenerek sağ menü bölümü oluşturulmuştur. Bu sayede kullanıcılar, sağ menü üzerinden kolayca erişebilecekleri Dashboard, görevler (Ping, Theharvester), sistem logları ve Profil gibi önemli bölümlere ulaşabileceklerdir. Bu düzenlemeler, arayüzün daha kullanıcı dostu ve projeye özgü hale getirilmesini sağlamaktadır.
-\subsubsection{Kullanıcı Girişi}
-Projeyi ilk açtığınızda, kullanıcı login sayfasıyla karşılaşacaksınız. Bu sayfada kimlik bilgilerinizi girdikten sonra doğrulama işlemi gerçekleştirilir ve başarılı bir şekilde doğrulandığınızda diğer sayfalara erişim sağlanır. Bu sayede projenin güvenliği ve kullanıcı gizliliği sağlanırken, yetkilendirme mekanizması sayesinde sadece yetkili kullanıcılar projenin içeriğine erişebilir. Bu işlem, kullanıcıların projenin sunduğu özelliklere erişebilmeleri ve projeyi kullanmaya başlayabilmeleri için önemli bir adımdır.
-\subsubsection{Kontrol Paneli}
+Bir servis çalışma sureci şekilde gösterilmiştir
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/service.jpeg}
+	\caption{Ping Görevi Çalışma Diyagramı}
+	\label{fig:ping_task_diagram}
+\end{figure}
 
-Giriş yaptıktan sonra karşılaşacağınız ilk sayfa Kontrol Paneli olacaktır. Kontrol paneli, kullanıcılara projede gerçekleştirilebilecek işlemleri açıklayan ve sunan bir sayfadır. Bu sayede kullanıcılar, projenin farklı özelliklerini keşfedebilir, verileri yönetebilir, raporları görüntüleyebilir veya diğer kullanıcılarla etkileşimde bulunabilir. Kontrol paneli, projenin merkezi bir noktasıdır ve kullanıcılara projenin sunmuş olduğu işlevselliği keşfetme ve kullanma imkanı sağlar. Bu sayede kullanıcılar projenin potansiyelini tam olarak kullanabilir ve projenin amaçlarına yönelik işlemleri gerçekleştirebilirler.
-\subsubsection{Görevler Bölümü}
-Sağ menüde bulunan Görevler bölümünden, kullanıcılar yeni görevler oluşturabilir ve önceden oluşturulmuş görevlere erişebilirler. Görevler bölümü, kullanıcılara farklı işlemleri gerçekleştirmek için bir arayüz sağlar. Örneğin, bir Ping görevi oluşturulduğunda, kullanıcılar konteynırların çıktılarına, kayıp yüzdesine, maksimum, minimum ve ortalama geri dönüş sürelerine erişebilirler. Bu bilgiler, görevin durumu ve performansı hakkında önemli bilgiler sunar. Kullanıcılar, görevlerin sonuçlarını inceleyebilir, performans analizleri yapabilir ve gerektiğinde görevleri düzenleyebilirler. Görevler bölümü, kullanıcıların projede yapılan işlemleri izleme ve yönetme sürecine katkı sağlar, verimliliği artırır ve kullanıcılara kontrol sağlar.
-\subsubsection{Sistem Logları}
-Sağ menüde bulunan Sistem Logları bölümü, kullanıcılara log kayıtlarını görüntüleme imkanı sunar. Bu log kayıtları, kullanıcının hangi görevleri ne zaman çalıştırdığını, görevlerin tamamlanma sürelerini, başarı durumunu ve oturum açma/kapatma bilgilerini içerir. Sistem Logları bölümü, kullanıcılara gerçek zamanlı olarak yapılan işlemleri takip etme ve denetleme yeteneği sağlar. Bu sayede kullanıcılar, projenin geçmişinde gerçekleşen işlemleri izleyebilir, performans analizleri yapabilir ve gerektiğinde sorun giderme yapabilir. Sistem Logları bölümü, kullanıcılara projenin izlenebilirliğini artırırken, işlemlerin güvenliğini ve bütünlüğünü de sağlar.
-\subsubsection{Hesabım Bölümü}
-Hesabım bölümü, kullanıcılara profil düzenlemelerini gerçekleştirme imkanı sunar. Bu bölümde kullanıcılar, profil bilgilerini güncelleyebilir, şifrelerini değiştirebilir, iletişim tercihlerini yönetebilir ve gizlilik ayarlarını düzenleyebilir. Profil düzenlemeleri sayesinde kullanıcılar, kendi hesaplarını kişiselleştirme ve özelleştirme imkanına sahip olurlar. Bu şekilde, kullanıcılar projedeki profil bilgilerini istedikleri şekilde yönetebilir ve hesaplarını kendi ihtiyaçlarına göre ayarlayabilirler. Hesabım bölümü, kullanıcılara projedeki kişisel bilgilerini güncelleme ve yönetme kolaylığı sağlar, böylece kullanıcılar projede daha iyi bir kullanıcı deneyimi yaşayabilirler.
+\subsection{Servis Ekleme İşlemi Projesinde}
 
-%arayüz fotoğrafları eklenecek 
-\subsection{Arka plan işleyişi}
-Projenin alt yapısı, PHP framework'ü olan Laravel kullanılarak geliştirilmiştir. Projenin çalışması için bir docker-compose.yml dosyası kullanılarak Docker'da bir servis oluşturulmuştur. Bu servis, iki konteyner oluşturarak projenin çalışmasını sağlamaktadır. Docker yönetimi için Docker Engine API kullanılmıştır.
+Bu projede, varsayılan olarak Ping görevi servisi bulunmaktadır. Ekstra servisler eklemek için Laravel paketleri geliştirebilir ve bu paketleri Composer aracılığıyla projeye dahil edilebilir. Örneğin, Theharvester servisi geliştirilmiş ve projeye eklenmiştir.
 
-\subsubsection{Docker Engine API}
+Theharvester servisini projeye dahil etmek için aşağıdaki adımları takip edebilirsiniz:
 
-Docker, Docker Engine API olarak adlandırılan arka plan programı sayesinde etkileşim için bir API sağlamaktadır. Docker Engine API, birçok modern programlama dilinde yer alan HTTP kütüphanesi tarafından erişilen bir RESTful API'dir. Projedeki PHP SDK güncel olmadığı için, Docker API'yi kullanarak Laravel uygulaması ile haberleşme sağlayan DockerService adında bir servis yazılmıştır. Bu sayede konteyner oluşturma, çalıştırma, detaylarını görüntüleme gibi işlemler yapılabilmektedir.
+1. Terminalde projenin bulunduğu dizine aşağıdaki komutu kullanılabilir:
+\begin{lstlisting}[language=bash]
+	$ composer require ikay/theharvester-service
+\end{lstlisting}
 
-\subsubsection{Laravel Özellikleri}
+Bu komut, Theharvester servisini projeye Composer aracılığıyla ekleyecektir. Composer, bağımlılıkları otomatik olarak yönetir ve paketi projeye kurar.
 
-Bu projede, Laravel'in sağladığı özellikler kullanılarak geliştirme yapılmıştır. Bir IP'ye ping atma görevi oluşturma süreci şu şekildedir:
+2. Son olarak, paketin sağladığı komutları kullanabilmek için projeyi yeniden yüklenmesi gerekmektedir. Terminalde aşağıdaki komutu çalıştırılabilir:
+\begin{lstlisting}[language=bash]
+	$ php artisan theharvester:install
+\end{lstlisting}
 
-Kullanıcı, ping oluşturma görevi formunu doldurmalıdır. Formda, görev başlığı, görev açıklaması, atılacak IP adresi, oluşturulacak konteyner sayısı ve her bir konteynerda kaç adet ping atılacağı gibi fieldler bulunmaktadır.
+Bu komut, Theharvester paketinin projede gereken yapılandırmaları yapacaktır.
 
-Form doldurulduktan sonra, PingRequest sınıfı devreye girecektir. Bu, Laravel'in sağladığı bir özellik olan Request'tir ve formdan gelen bilgilerin doğruluğunu sağlamaktadır. Eğer bilgiler doğruysa, PingController'a geçilir. Eğer bilgiler doğrulanamazsa, form sayfasına geri yönlendirilir ve eksik olan fieldlerin altında bir hata mesajı yazılır.
+Böylece Theharvester servisi projeyi başarıyla dahil edilmiş olacaktır. Servisi kullanmaya başlamak için paketin sağladığı komutları veya yöntemleri kullanılabilir. Projenin ihtiyaçlarına göre bu yöntemleri özelleştirilebilir.
 
-PingController, yeni bir görev oluşturarak kullanıcıyı görev listesi sayfasına yönlendirir ve "oluşturuldu" mesajını yazdırır.
+Not : yukarıdaki adımlar varsayılan bir senaryo üzerinde örneklenmiştir. Paketinizin yapısına ve gereksinimlerine göre adımları uyarlamayı unutmayın.
 
-Yeni bir görev oluşturulduğunda, Laravel'in bir diğer özelliği olan "Event (Tetikleyici) \& Listener (Dinleyici)" devreye girer.
-
-Event \& Listener: Bu proje, yeni bir görev oluşturulduğunda event tetiklenir ve Listener çalışmaya başlar. Listener aracılığıyla DockerService çalıştırılır. Kullanıcıyı Form sayfasında bekletmemek için Listener kuyruğa alınır ve DockerService işlemi tamamlandıktan sonra görev durumu güncellenir. Başarılıysa 1, başarısızsa 2 olarak bildirilir
-%ibrahim bu kısımda özet yazacak detaylandırılacak
- \subsection {Veritabanı kısmı İçin }
- MySQL veritabanı kullanılarak bir proje için optimize edilmiş bir veritabanı şeması oluşturuldu. Bu şema, "users" (kullanıcılar), "ping" (ping kayıtları) ve "pingcontainers" (ping konteynerleri) adında üç tabloyu içermektedir. Bu düzenleme, veritabanının performansını artırmak ve veri bütünlüğünü sağlamak amacıyla yapılmıştır.\\
-"users" tablosu, kullanıcıların temel bilgilerini içerir ve her kullanıcıya birincil anahtar (ID) ile benzersiz bir kimlik atar. Ayrıca kullanıcı adı, e-posta adresi ve diğer ilgili bilgiler gibi sütunlar da içerir.\\
-"pingcontainers" tablosu, kullanıcıların oluşturabileceği ping konteynerlerini temsil eder. Her konteyner birincil anahtar ile tanımlanır ve kullanıcıya ait olacak şekilde kullanıcı kimliği (user ID) ile ilişkilendirilir. Bu tablo, kullanıcının birden fazla konteyner oluşturabilmesine olanak sağlar.\\
-"ping" tablosu, gerçekleşen ping olaylarını kaydetmek için kullanılır. Her ping kaydı, birincil anahtar ile tanımlanır ve bir konteynere (container ID) ve kullanıcıya (user ID) bağlanır. Bu ilişki, her ping kaydının hangi kullanıcı ve konteyner tarafından oluşturulduğunu gösterir.\\
-Bu veritabanı şeması, kullanıcıların birden fazla konteyner ve görev oluşturabilmesini sağlar. Ayrıca, her görevin bir kullanıcı tarafından oluşturulduğu ilişkisi sayesinde veri bütünlüğünü korur.\\
-Bu düzenleme, veritabanının daha etkili bir şekilde veri saklamasını ve verilere hızlı erişim sağlamasını amaçlamaktadır. Ayrıca, veri bütünlüğünü korumak için gereken ilişkileri de sağlamaktadır.\\
- \begin{figure}[]
-    \centering
-    \includegraphics[width=0.9\textwidth]{images/sql.jpg}
-    \caption{Sql ping tabloları}
-    \label{fig:resim_etiketi}
-  \end{figure}
-
-
+Theharvester açık kaynak olarak geliştirilmiştir bu github linkinden ulaşabilmektedir : \href{https://github.com/ikhalilatteib/theharvester-service}{https://github.com/ikhalilatteib/theharvester-service}
 
