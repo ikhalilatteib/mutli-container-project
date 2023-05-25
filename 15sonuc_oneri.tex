@@ -1,5 +1,23 @@
 \section{SONUÇLAR VE ÖNERİLER}
-Docker projesinde büyük çaplı bir projeye ihtiyaç duyulmadığı için Kubernetes veya Swarm gibi Docker'in oluşturduğu yönetim araçlarını kullanmaya gerek yoktur. Docker, projesinde ihtiyaçları karşılamak için yeterli olacaktır. Bu nedenle, projenin ölçeği ve karmaşıklığı dikkate alındığında, Docker'in hafif ve taşınabilir konteynerler sağlaması, izole çalışma ortamı sunması ve uygulama dağıtımını kolaylaştırması avantajlıdır. Bu sayede projedeki gereksinimleri etkili bir şekilde yönetebilir ve geliştirilebilir.\\
 
-Proje büyüdükçe ve veritabanı gereksinimleri karmaşıklaştıkça, MySQL yerine PostgreSQL tercih edilebilir. PostgreSQL, karmaşık veri yapıları ve büyük veri hacimlerini etkili bir şekilde işleyebilme özelliğiyle öne çıkar. Ayrıca veri bütünlüğü ve güvenlik konularında da güçlü bir seçenektir. PostgreSQL'in ölçeklenebilirlik yetenekleri, büyük ölçekli sistemlerde yaygın olarak kullanılmasını sağlar.
+Bu proje, konteyner teknolojilerinin yaygınlaşmasıyla birlikte ortaya çıkan karmaşıklığı azaltmak amacıyla geliştirilmiştir. Konteyner kullanımını kolaylaştırmayı hedefleyen bu projede, konteyner oluşturma, çalıştırma ve sonuçları başarıyla gerçekleştirilmektedir. 
 
+Projenin başarılı sonuçları aşağıdaki şekillerde değerlendirilebilir:
+\begin{itemize}
+    \item Konteyner İşlemleri: Proje, Docker Engine API ile entegre olarak konteyner oluşturma, çalıştırma, durdurma ve silme gibi işlemleri başarılı bir şekilde gerçekleştirmektedir. Bu sayede kullanıcılar, Docker konteynerlerini kolaylıkla yönetebilmektedir.
+    \item Çalışma Performansı: Projenin uygulama performansı, Guzzle kütüphanesinin etkili kullanımı ve Docker Engine API'nin sağladığı hızlı yanıtlar sayesinde yüksek seviyede tutulmaktadır. Bu da kullanıcı deneyimini olumlu yönde etkilemektedir.
+    \item Theharvester Servisi: Proje, servislerin eklenmesini desteklemektedir. Örnek olarak Theharvester servisi geliştirilmiş ve başarıyla projeye entegre edilmiştir. Bu sayede kullanıcılar, projelerine farklı servisleri ekleyerek genişletme imkanına sahip olmaktadır.
+\end{itemize}
+
+
+
+
+\subsection*{Öneriler}
+\begin{itemize}
+    \item Kullanıcı Arayüzü Geliştirme: Gelecekte, web tabanlı bir kullanıcı arayüzü oluşturulabilir. Bu arayüz sayesinde kullanıcılar, konteyner oluşturma, silme, güncelleme ve sonuçları inceleme gibi işlemleri görsel bir şekilde gerçekleştirebilir. Bu, kullanım kolaylığı sağlayacak ve projenin kullanıcı tabanını genişletecektir.
+    \item Hata Yönetimi ve Güncelleme: Proje, hataların ve istisnaların yönetimini etkin bir şekilde gerçekleştirmektedir. Gelecekte, kullanıcı geri bildirimleri ve testlerle projenin daha da güçlendirilmesi ve hata sayısının en aza indirgenmesi sağlanabilir. Ayrıca, Docker Engine API'nin güncellemelerini takip etmek ve projeyi güncel tutmak da önemlidir.
+    \item Dokümantasyon ve Destek: Projeye ilişkin kapsamlı bir dokümantasyon oluşturmak, kullanıcıların projeyi daha iyi anlamalarını ve kullanmalarını sağlayacaktır. Ayrıca, kullanıcıların karşılaştıkları sorunlar için destek sağlamak da önemlidir. Sorunların çözümüne yönelik bir destek kanalı veya topluluk oluşturmak, kullanıcı memnuniyetini artıracaktır.
+    \item Genişletilebilirlik: Projeye ekstra servisler eklemek için Laravel paketlerinin geliştirilmesi teşvik edilmelidir. Geliştiricilere açık API ve belgeleme sağlanarak, yeni servislerin kolayca entegre edilebilmesi ve projenin kullanım alanının genişlemesi sağlanabilir.
+\end{itemize}
+
+Sonuç olarak, bu proje konteyner teknolojilerinin karmaşıklığını azaltarak kullanım kolaylığı sağlamak amacıyla geliştirilmiştir. Başarılı sonuçları ve önerilerle birlikte, projenin gelecekteki gelişim potansiyeli ve kullanıcı memnuniyetini artırma imkanı vardır.
