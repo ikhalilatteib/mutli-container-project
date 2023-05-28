@@ -1,21 +1,15 @@
 \section{KULLANILAN TEKNOLOJİLER}
-Bu çalışmada kullanılan teknolojiler:
-\begin{itemize}
-  \item Docker
-  \item Laraval
-  \item MySQL
-\end{itemize} 
-Bu teknolojiler tercih Sebepleri ve özellikleri detaylıca aşağıda bahsedilmiştir.
+Bu çalışmada kullanılan teknolojilerin tercih sebepleri ve özellikleri detaylıca aşağıda bahsedilmiştir.
 \subsection{Docker}\label{subsec:docker}
-Docker, yazılım uygulamalarını konteynerlere paketleme ve dağıtma konusunda kullanılan bir platformdur. Bu teknoloji, uygulamaların bağımsız bir şekilde çalışabilmesini sağlar ve kurulum ve dağıtım süreçlerini kolaylaştırır. Docker, bir uygulamanın çalışması için gerekli olan tüm bağımlılıkları içeren bir konteyner oluşturmanızı sağlar. Bu konteyner, farklı ortamlarda (geliştirme, test, üretim) aynı şekilde çalışabilir, uyumluluk sorunlarını en aza indirir ve uygulamaların taşınabilirliğini artırır. Docker, yüksek verimlilik ve izolasyon sağlar, kaynakların daha etkili kullanılmasını sağlar ve sistem yönetimini kolaylaştırır.\cite{docker}\\
-Bu projede kullanıldığı Docker özellikleri:
+Docker, yazılım uygulamalarını konteynerlere paketleme ve dağıtma konusunda kullanılan bir platformdur. Bu teknoloji, uygulamaların bağımsız bir şekilde çalışabilmesini sağlar ve kurulum ve dağıtım süreçlerini kolaylaştırır. Docker, bir uygulamanın çalışması için gerekli olan tüm bağımlılıkları içeren bir konteyner oluşturmanızı sağlar. Bu konteyner, farklı ortamlarda (geliştirme, test, üretim) aynı şekilde çalışabilir, uyumluluk sorunlarını en aza indirir ve uygulamaların taşınabilirliğini artırır. Docker, yüksek verimlilik ve izolasyon sağlar, kaynakların daha etkili kullanılmasını sağlar ve sistem yönetimini kolaylaştırır \cite{docker}.\\
+Bu çalışmada kullanılan Docker özellikleri:
 \begin{itemize}
   \item \textbf{Docker compose}: Docker ortamında birden fazla konteyneri yönetmek için kullanılan bir araçtır. Docker Compose, bir YAML dosyası aracılığıyla konteynerleri tanımlamanıza ve yapılandırmanıza olanak sağlar. Bu YAML dosyasında, farklı konteynerlerin konfigürasyonları, ağ bağlantıları, bağımlılıkları ve diğer özellikleri belirtilebilir. Docker Compose, bu dosyayı okuyarak ve yorumlayarak belirtilen konteynerleri oluşturur, başlatır ve durdurur. Böylece birden fazla konteynerin aynı ortamda birlikte çalışmasını kolaylaştırır.
-  \item \textbf{Docker Engine API}: Docker ortamını yönetmek için kullanılan bir programlama arabirimidir. Docker Engine, Docker'ın temel bileşenidir ve konteynerlerin oluşturulması, çalıştırılması ve yönetilmesi gibi işlemleri gerçekleştirir. Docker Engine API, Docker ortamının komut satırı arayüzünün (CLI) ötesine geçerek programatik olarak Docker ortamını kontrol etmenizi sağlar. Bu API, Docker ile etkileşim kurmanızı ve Docker işlemlerini otomatikleştirmenizi sağlayan bir dizi yöntem ve işlev sağlar. Docker Engine API, HTTP üzerinden erişilebilen bir RESTful API olarak sunulur ve Docker komutlarını programlamaya entegre etmenize olanak tanır. \cite{docker_api_reference}
+  \item \textbf{Docker Engine API}: Docker ortamını yönetmek için kullanılan bir programlama arabirimidir. Docker Engine, Docker'ın temel bileşenidir ve konteynerlerin oluşturulması, çalıştırılması ve yönetilmesi gibi işlemleri gerçekleştirir. Docker Engine API, Docker ortamının komut satırı arayüzünün (CLI) ötesine geçerek programatik olarak Docker ortamını kontrol etmenizi sağlar. Bu API, Docker ile etkileşim kurmanızı ve Docker işlemlerini otomatikleştirmenizi sağlayan bir dizi yöntem ve işlev sağlar. Docker Engine API, HTTP üzerinden erişilebilen bir RESTful API olarak sunulur ve Docker komutlarını programlamaya entegre etmenize olanak tanır \cite{docker_api_reference}.
 \end{itemize}
 
 \subsection{Laravel}
-Laravel, PHP tabanlı bir web uygulama geliştirme framework'üdür. MVC (Model-View-Controller) tasarım desenini benimser ve geliştiricilere web uygulamaları oluşturmak için bir dizi kullanışlı özellik sunar. Laravel, güçlü bir yönlendirme sistemi, otomatik olarak oluşturulan SQL sorguları, oturum yönetimi, veritabanı migrasyonları, önbellekleme, form doğrulama gibi birçok bileşeni içerir. Bu bileşenler, geliştirme sürecini hızlandırır ve kod tekrarını azaltır. Laravel'in geniş bir topluluğu vardır ve bu da destek almak ve kaynaklara erişmek açısından avantaj sağlar.\cite{laravel_documentation}\\
+Laravel, PHP tabanlı bir web uygulama geliştirme framework'üdür. MVC (Model-View-Controller) tasarım desenini benimser ve geliştiricilere web uygulamaları oluşturmak için bir dizi kullanışlı özellik sunar. Laravel, güçlü bir yönlendirme sistemi, otomatik olarak oluşturulan SQL sorguları, oturum yönetimi, veritabanı migrasyonları, önbellekleme, form doğrulama gibi birçok bileşeni içerir. Bu bileşenler, geliştirme sürecini hızlandırır ve kod tekrarını azaltır. Laravel'in geniş bir topluluğu vardır ve bu da destek almak ve kaynaklara erişmek açısından avantaj sağlar \cite{laravel_documentation}.\\
 Bu çalışmada kullanılan Laravel özelliklerine kısaca bir göz atalım:
 \begin{itemize}
   \item \textbf{Migration (migrasyon)} : Laravel, veritabanı tablolarını oluşturmak ve yönetmek için migrasyonları kullanır. Migrasyonlar, veritabanı şemalarını kod olarak temsil eder ve veritabanı yapısının kolayca değiştirilmesini ve sürdürülmesini sağlar.
@@ -31,16 +25,16 @@ Bu çalışmada kullanılan Laravel özelliklerine kısaca bir göz atalım:
 \subsection{MySQL}
 MySQL, popüler bir açık kaynaklı ilişkisel veritabanı yönetim sistemidir. MySQL, verilerin depolanması, yönetilmesi ve erişilmesi için kullanılır. Ölçeklenebilir, güvenilir ve performanslı bir veritabanı sunucusu olarak bilinir. MySQL, geniş bir kullanıcı tabanına ve gelişmiş özelliklere sahiptir. SQL (Structured Query Language) tabanlı bir veritabanı yönetim sistemi olması, veritabanı işlemlerini kolaylaştırır ve standart bir dil kullanmasını sağlar. MySQL, birçok programlama diliyle entegre edilebilir ve çeşitli platformlarda kullanılabilir.
 
-Şekil \ref{fig:veritabani_diyagrami}, Laravel uygulamanızın veritabanı diyagramını temsil ediyor. Bu diyagram, veritabanı tablolarını ve bu tablolar arasındaki ilişkileri gösterir. Her tablo, Laravel migrasyonlarıyla oluşturulan bir veritabanı tablosunu temsil eder ve tablolardaki sütunları ve ilişkileri gösterir. \ref{fig:veritabani_diyagrami} İncelenmesi zor olabilecek büyük boyutta bir diyagram olduğundan, daha düşük çözünürlüklü bir resmi bu bağlantıda bulunmaktadır, \href{https://tinyurl.com/3n8v9pza}{https://tinyurl.com/3n8v9pza} Bu bağlantıdaki resim, diyagramı daha kolay görüntülemenizi sağlayacaktır.
+Şekil \ref{fig:veritabani_diyagrami}, Laravel uygulamanızın veritabanı şemasını temsil ediyor. Bu şema, veritabanı tablolarını ve bu tablolar arasındaki ilişkileri gösterir. Her tablo, Laravel migrasyonlarıyla oluşturulan bir veritabanı tablosunu temsil eder ve tablolardaki sütunları ve ilişkileri gösterir. Şekil \ref{fig:veritabani_diyagrami} incelenmesi zor olabilecek büyük boyutta bir şema olduğundan, daha yüksek çözünürlüklü bir resmi bu bağlantıda bulunmaktadır, \href{https://tinyurl.com/3n8v9pza}{https://tinyurl.com/3n8v9pza}. Bu bağlantıdaki resim, şemayı daha kolay görüntülemenizi sağlayacaktır.
 
 Bu teknolojilerin kullanılması, konteyner tabanlı uygulama dağıtımının sağlanmasını, web uygulamasının geliştirilmesini ve veritabanı yönetimini etkin bir şekilde gerçekleştirmeyi hedeflemektedir.
 \begin{figure}[ht]
-  \includegraphics[width=\linewidth]{images/diyagram.jpeg}
-  \caption{Veritabanı Diyagramı}
+  \includegraphics[width=\linewidth]{images/exported_from_idea.drawio.pdf}
+  \caption{Veritabanı şeması}
   \label{fig:veritabani_diyagrami}
   \end{figure}
-\subsection{Konteyner ile ilgili Temel bilgiler}
-Konteyner, bir uygulamanın çalışması için gereken tüm bağımlılıkları ve bileşenleri bir araya getiren ve bu bileşenlerin izole edilmiş bir ortamda çalışmasını sağlayan bir yazılım paketleme ve dağıtım teknolojisidir. Konteynerler, bir uygulamanın tüm çalışma zamanı bağımlılıklarını içeren taşınabilir bir ortam sunar ve böylece uygulamaların farklı platformlarda tutarlı bir şekilde çalışmasını sağlar.\cite{domenici_bravo}
+\subsection{Konteyner ile İlgili Temel Bilgiler}
+Konteyner, bir uygulamanın çalışması için gereken tüm bağımlılıkları ve bileşenleri bir araya getiren ve bu bileşenlerin izole edilmiş bir ortamda çalışmasını sağlayan bir yazılım paketleme ve dağıtım teknolojisidir. Konteynerler, bir uygulamanın tüm çalışma zamanı bağımlılıklarını içeren taşınabilir bir ortam sunar ve böylece uygulamaların farklı platformlarda tutarlı bir şekilde çalışmasını sağlar \cite{domenici_bravo}.
 
 Konteynerlerin avantajları şunlardır:
 \begin{itemize}
@@ -57,6 +51,6 @@ Konteynerlerin dezavantajları şunlardır:
   \item Veri Yönetimi: Konteynerler, genellikle veri yönetimi konusunda bazı zorluklar sunabilir. Konteynerlerin geçici doğası ve izole edilmiş dosya sistemleri, verilerin nasıl depolanacağı, paylaşılacağı ve korunacağı konusunda bazı ek adımlar gerektirebilir. Bu, uygulama geliştiricilerinin veri yönetimi stratejilerini dikkate almalarını gerektirir.
 \end{itemize}
 
-Konteyner teknolojileri, uygulamaları hızlı bir şekilde dağıtmak, taşımak ve ölçeklendirmek için güçlü bir araçtır. Ancak, her projenin ihtiyaçlarına ve altyapısına bağlı olarak avantajları ve dezavantajları dikkate almak önemlidir.
+Konteyner teknolojileri, uygulamaları hızlı bir şekilde dağıtmak, taşımak ve ölçeklendirmek için güçlü bir araçtır. Ancak, her çalışmanin ihtiyaçlarına ve altyapısına bağlı olarak avantajları ve dezavantajları dikkate almak önemlidir.
 
-Proje ne olduğunu nasıl çalıştığı bölüm \ref{sec:project}'te detaylıca anlatılmıştır.
+Çalışmanın ne olduğunu nasıl çalıştığı Bölüm \ref{sec:study}'te detaylıca anlatılmıştır.

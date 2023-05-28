@@ -1,23 +1,23 @@
 \section{GİRİŞ}
-Günümüzde teknolojik projelerin karmaşıklığı ve iş yükünün artmasıyla birlikte, verimli ve ölçeklenebilir bir altyapı tasarımı büyük önem taşımaktadır. Bu nedenle, Web Tabanlı Konteyner Orkestrasyon Sistemi, proje olarak ideal bir çözüm değerlendirilmiştir.
+Günümüzde teknolojik çalışmalerin karmaşıklığı ve iş yükünün artmasıyla birlikte, verimli ve ölçeklenebilir bir altyapı tasarımı büyük önem taşımaktadır. Bu nedenle, Web Tabanlı Konteyner Orkestrasyon Sistemi, çalışma olarak ideal bir çözüm değerlendirilmiştir.
 
 Konteyner kavramı, ilk olarak 1979 yılında ortaya atılmış ve o tarihten itibaren gelişimini sürdürmüştür. Bu süreçte Unix V7 ile ilk kez kullanılmıştır. FreeBSD Jails, Linux VServer, Oracle Solaris Containers, Open VZ, Process Containers (Google), LXC, Warden ve Lmctfy gibi gelişim süreçlerinden geçerek günümüze kadar gelmiştir.
 
-Konteyner teknolojisinin daha yaygın hale gelmesi, 2000'li yılların başında FreeBSD Jail ile gerçekleşmiştir. Ardından Jacques Gélinas'in VServer projesi ile Linux ortamına dahil olmuştur. Bu temel altyapının oluşturulmasının ardından, günümüz Linux konteynerlerinin yapısı şekillenmeye başlamıştır.
+Konteyner teknolojisinin daha yaygın hale gelmesi, 2000'li yılların başında FreeBSD Jail ile gerçekleşmiştir. Ardından Jacques Gélinas'in VServer çalışmasi ile Linux ortamına dahil olmuştur. Bu temel altyapının oluşturulmasının ardından, günümüz Linux konteynerlerinin yapısı şekillenmeye başlamıştır.
 
 Ancak, konteyner teknolojisi bu gelişmelere rağmen hala genel kullanım için yaygın değildi. 2008 yılında Docker, bu alanda devrim niteliğinde bir adım atmıştır. Google gibi büyük bilgi teknolojileri şirketlerinin kullandığı bu sistem, son kullanıcıların da hizmetine sunulmuş ve konteyner teknolojisinin hızla gelişmesine yol açmıştır. Docker, kendi adını taşıyan konteyner teknolojisiyle (dotCloud aracılığıyla) kullanıcıları tanıştırmıştır.\cite{container}
 
-Bu proje için Docker'ın kullanılması uygun görülmüştür. Bunun temel nedenleri arasında hafiflik, taşınabilirlik, ölçeklenebilirlik, kolay dağıtım ve yönetim, izolasyon ve güvenlik avantajları bulunmaktadır. Bu tasarım yaklaşımı, projenin gereksinimlerini etkin bir şekilde karşılamak ve iş yükünü yönetmek için ideal bir çözüm sunmaktadır.
+Bu çalışma için Docker'ın kullanılması uygun görülmüştür. Bunun temel nedenleri arasında hafiflik, taşınabilirlik, ölçeklenebilirlik, kolay dağıtım ve yönetim, izolasyon ve güvenlik avantajları bulunmaktadır. Bu tasarım yaklaşımı, çalışmanin gereksinimlerini etkin bir şekilde karşılamak ve iş yükünü yönetmek için ideal bir çözüm sunmaktadır.
 
-Projeyle ilgili yapılan araştırmanın bir bölümü olan Literatür Taraması, sonraki bölümde detaylı olarak açıklanmıştır.
-\section{Literatür Taraması}
-Konteynerizasyon konusunda akademik çalışmalar 2008 yıllarında başlamış, 2013 yıllarından sonra yoğunlaşmıştır. Bu projede konuya yakın olan daha önce yapılan çalışmalar aşağıda özetlenmiştir.
+Çalışmayla ilgili yapılan araştırmanın bir bölümü olan Literatür Taraması, sonraki bölümde detaylı olarak açıklanmıştır.
+\section{LİTERATÜR TARAMASI}
+Konteynerizasyon konusunda akademik çalışmalar 2008 yıllarında başlamış, 2013 yıllarından sonra yoğunlaşmıştır. Bu çalışmade konuya yakın olan daha önce yapılan çalışmalar aşağıda özetlenmiştir.
 
 "An Overview of Containerization Technology: Advantages, Challenges, and Future Directions" adlı çalışmada, yazarlar containerization teknolojisinin genel bir bakışını, avantajlarını, zorluklarını ve gelecekteki yönelimlerini ele almaktadır. Makale, containerization teknolojisinin nasıl çalıştığına, sanallaştırma teknolojileriyle karşılaştırılmasına ve çeşitli kullanım senaryolarına odaklanmaktadır \cite{Smith_Emily}.
 
 "Docker for Multi-containers Web Application" başlıklı makalede, Sharma, Saxena ve Singh, çoklu konteyner web uygulamaları için Docker teknolojisini ele almaktadır. Makale, 2020 2. Uluslararası Sanayi Uygulamaları İçin Yenilikçi Mekanizmalar Konferansı'nda sunulmuştur. Yazarlar, Docker teknolojisinin kullanımıyla çoklu konteyner web uygulamalarının nasıl hazırlanacağını ve dağıtılacağını ele almaktadırlar. Makalede, Docker'in kullanımının avantajları ve web uygulamaları için uygunluğu da tartışılmaktadır \cite{sharma2020docker}.
 
-"Containerization: A Systematic Literature Review" başlıklı çalışma, containerization teknolojisi hakkında sistematik bir literatür taraması sunmaktadır. Yazarlar, containerization teknolojisinin farklı yönlerini, kullanım alanlarını, avantajlarını ve zorluklarını analiz etmektedirler. Ayrıca, çalışmada gelecekteki araştırma yönelimleri ve containerization teknolojisinin geliştirilmesi için öneriler de sunulmaktadır.\cite{Brown_Jennifer}
+"Containerization: A Systematic Literature Review" başlıklı çalışma, containerization teknolojisi hakkında sistematik bir literatür taraması sunmaktadır. Yazarlar, containerization teknolojisinin farklı yönlerini, kullanım alanlarını, avantajlarını ve zorluklarını analiz etmektedirler. Ayrıca, çalışmada gelecekteki araştırma yönelimleri ve containerization teknolojisinin geliştirilmesi için öneriler de sunulmaktadır \cite{Brown_Jennifer}.
 
 "Mastering Docker" adlı kitap, Docker teknolojisi hakkında kapsamlı bir kılavuz sunmaktadır. Okuyucular, Docker'ın nasıl kullanılacağı, konteynerlerin nasıl tasarlanacağı, dağıtılacağı ve yönetileceği hakkında bilgi edinebilirler. Kitap, uygulama geliştirme ve dağıtım süreçlerinde Docker'ın nasıl kullanılabileceği konusunda pratik bilgiler sunmaktadır. Sonuç olarak, "Mastering Docker" kitabı, Docker teknolojisi hakkında kapsamlı bir kılavuz sunarak, okuyucuların konteynerleştirme ve DevOps becerilerini geliştirmelerine yardımcı olmayı amaçlamaktadır \cite{mckendrick2020mastering}.
 
@@ -25,4 +25,4 @@ Konteynerizasyon konusunda akademik çalışmalar 2008 yıllarında başlamış,
 
 "Docker Compose'un Çok Bileşenli Sistemleri Oluşturmak İçin Kullanımının İncelenmesi" başlıklı makale, Docker Compose'un kullanımının çoğu zaman çok bileşenli sistemlerin oluşturulması için yararlı olduğunu inceliyor. Bununla birlikte, Docker Compose dosyalarının kullanımı konusunda belirli zorluklar da bulunmaktadır. Örneğin, Docker Compose dosyalarının oluşturulması ve yönetilmesi karmaşık olabilir ve Docker Compose dosyalarının sürdürülebilirliği sorunları ortaya çıkabilir \cite{ibrahim2021study}.
 
-Bu literatür taraması, Docker teknolojisi ve konteynerleştirme üzerine yapılmış bazı çalışmaları özetlemektedir. Bu çalışmalar, Docker'ın çoklu konteyner uygulamaları, orkestrasyon yöntemleri ve kullanım zorlukları gibi farklı yönlerini ele almaktadır. Bu bilgiler, bu projede kullanılan teknolojik seçimlerin nedenleri ve özellikleri hakkında bilgi vermektedir.
+Bu literatür taraması, Docker teknolojisi ve konteynerleştirme üzerine yapılmış bazı çalışmaları özetlemektedir. Bu çalışmalar, Docker'ın çoklu konteyner uygulamaları, orkestrasyon yöntemleri ve kullanım zorlukları gibi farklı yönlerini ele almaktadır. Bu bilgiler, bu çalışmade kullanılan teknolojik seçimlerin nedenleri ve özellikleri hakkında bilgi vermektedir.
