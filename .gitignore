@@ -8,3 +8,4 @@
 !logomuz.jpg
 !.github/workflows/*
 *.pdf
+!*.bib
