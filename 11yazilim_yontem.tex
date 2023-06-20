@@ -16,7 +16,7 @@ Bu çalışmada kullanılan Laravel özelliklerine kısaca bir göz atalım:
   \item \textbf{Model} : Laravel'de model, veritabanı tablolarıyla ilişkilendirilen veri erişim katmanını temsil eder. Model sınıfları, veritabanı işlemlerini gerçekleştirmek ve verileri işlemek için kullanılır.
   \item \textbf{Request} :  Laravel, HTTP isteklerini işlemek için request (istek) sınıflarını kullanır. Bu sınıflar, gelen istek verilerini doğrulamak, işlemek ve manipüle etmek için kullanılır.
   \item \textbf{Controller} : Laravel'de controller (denetleyici), HTTP isteklerini yöneten ve ilgili iş mantığını uygulayan sınıflardır. Bir controller, bir veya daha fazla işlem (action) içerir ve bu işlemler, isteklere yanıt olarak çalıştırılır.
-  \item \textbf{Route} : Laravel, yönlendirme (routing) mekanizmasıyla istekleri doğru controller ve işlemle eşleştirir. Route dosyalarında, URL'leri belirleyebilir, istek yönlendirmelerini tanımlayabilir ve parametreleri yakalayabilirsiniz.
+  \item \textbf{Route} : Laravel, yönlendirme (routing) mekanizmasıyla istekleri doğru controller ve işlemle eşleştirir. Route dosyalarında, URLleri belirleyebilir, istek yönlendirmelerini tanımlayabilir ve parametreleri yakalayabilirsiniz.
   \item \textbf{Queue} : Laravel, işleri (jobs) arkaplanda sıralı olarak çalıştırmak için kuyruk (queue) sistemini destekler. Kuyruklar, yoğun işlem yükü altında olan uygulamalarda işleri geciktirir ve daha sonra işlerin işlenmesini sağlar.
   \item \textbf{Auth} : Laravel'in sağladığı kimlik doğrulama (authentication) sistemi. Auth bileşeni, kullanıcı kaydı, oturum yönetimi, şifre sıfırlama gibi kullanıcı kimlik doğrulama işlemlerini kolaylaştırır.
   \item \textbf{Event/Listener} : Laravel'de "Event" ve "Listener" kavramları, olay tabanlı programlama yaklaşımını desteklemek için kullanılır. Bir "Event" (olay), uygulamanızda gerçekleşen belirli bir eylemi veya durumu temsil eder.
@@ -25,7 +25,7 @@ Bu çalışmada kullanılan Laravel özelliklerine kısaca bir göz atalım:
 \subsection{MySQL}
 MySQL, popüler bir açık kaynaklı ilişkisel veritabanı yönetim sistemidir. MySQL, verilerin depolanması, yönetilmesi ve erişilmesi için kullanılır. Ölçeklenebilir, güvenilir ve performanslı bir veritabanı sunucusu olarak bilinir. MySQL, geniş bir kullanıcı tabanına ve gelişmiş özelliklere sahiptir. SQL (Structured Query Language) tabanlı bir veritabanı yönetim sistemi olması, veritabanı işlemlerini kolaylaştırır ve standart bir dil kullanmasını sağlar. MySQL, birçok programlama diliyle entegre edilebilir ve çeşitli platformlarda kullanılabilir.
 
-Şekil \ref{fig:veritabani_diyagrami}, Laravel uygulamanızın veritabanı şemasını temsil ediyor. Bu şema, veritabanı tablolarını ve bu tablolar arasındaki ilişkileri gösterir. Her tablo, Laravel migrasyonlarıyla oluşturulan bir veritabanı tablosunu temsil eder ve tablolardaki sütunları ve ilişkileri gösterir. Şekil \ref{fig:veritabani_diyagrami} incelenmesi zor olabilecek büyük boyutta bir şema olduğundan, daha yüksek çözünürlüklü bir resmi bu bağlantıda bulunmaktadır, \href{https://tinyurl.com/3n8v9pza}{https://tinyurl.com/3n8v9pza}. Bu bağlantıdaki resim, şemayı daha kolay görüntülemenizi sağlayacaktır.
+Şekil \ref{fig:veritabani_diyagrami}, Laravel uygulamanızın veritabanı şemasını temsil ediyor. Bu şema, veritabanı tablolarını ve bu tablolar arasındaki ilişkileri gösterir. Her tablo, Laravel migrasyonlarıyla oluşturulan bir veritabanı tablosunu temsil eder ve tablolardaki sütunları ve ilişkileri gösterir. Şekil \ref{fig:veritabani_diyagrami} incelenmesi zor olabilecek büyük boyutta bir şema olduğundan, daha yüksek çözünürlüklü bir resim rapor reposunda bulunmaktadır.
 
 Bu teknolojilerin kullanılması, konteyner tabanlı uygulama dağıtımının sağlanmasını, web uygulamasının geliştirilmesini ve veritabanı yönetimini etkin bir şekilde gerçekleştirmeyi hedeflemektedir.
 \begin{figure}[ht]
@@ -51,6 +51,6 @@ Konteynerlerin dezavantajları şunlardır:
   \item Veri Yönetimi: Konteynerler, genellikle veri yönetimi konusunda bazı zorluklar sunabilir. Konteynerlerin geçici doğası ve izole edilmiş dosya sistemleri, verilerin nasıl depolanacağı, paylaşılacağı ve korunacağı konusunda bazı ek adımlar gerektirebilir. Bu, uygulama geliştiricilerinin veri yönetimi stratejilerini dikkate almalarını gerektirir.
 \end{itemize}
 
-Konteyner teknolojileri, uygulamaları hızlı bir şekilde dağıtmak, taşımak ve ölçeklendirmek için güçlü bir araçtır. Ancak, her çalışmanin ihtiyaçlarına ve altyapısına bağlı olarak avantajları ve dezavantajları dikkate almak önemlidir.
+Konteyner teknolojileri, uygulamaları hızlı bir şekilde dağıtmak, taşımak ve ölçeklendirmek için güçlü bir araçtır. Ancak, her çalışmanın ihtiyaçlarına ve altyapısına bağlı olarak avantajları ve dezavantajları dikkate almak önemlidir.
 
 Çalışmanın ne olduğunu nasıl çalıştığı Bölüm \ref{sec:study}'te detaylıca anlatılmıştır.
