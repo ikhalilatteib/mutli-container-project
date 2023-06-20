@@ -16,20 +16,22 @@ jobs:
         with:
           root_file: 0BMbitirme.tex
       - name: 'Tar files'
-        run: tar -cvf 0BMbitirme.tar /home/runner/work/mutli-container-project/
+        run: tar -cvf 0BMbitirme.tar 0BMbitirme.pdf
       - name: 'Upload 0BMbitirme'
         uses: actions/upload-artifact@v2
         with:
-         name: 0BMbitirme
-         path: 0BMbitirme.tar    
-      - uses: actions/download-artifact@v3
+          name: 0BMbitirme
+          path: 0BMbitirme.tar
+      - name: Download 0BMbitirme
+        uses: actions/download-artifact@v2
         with:
           name: 0BMbitirme
+          path: ./artifacts
       - name: Commit and push changes
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add /home/runner/work/mutli-container-project/mutli-container-project/0BMbitirme.pdf -f
+          git add ./artifacts/0BMbitirme.pdf
           git commit -m "Güncel PDF eklendi"
           git push
         env:
