@@ -14,7 +14,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: 0Mbitirme.tex
+          root_file: 0BMbitirme.tex
       - name: 'Tar files'
         run: tar -cvf 0BMbitirme.tar /home/runner/work/mutli-container-project/
       - name: 'Upload 0BMbitirme'
